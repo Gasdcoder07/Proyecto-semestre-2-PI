@@ -6,9 +6,11 @@ export default function Login() {
         <div className="login-container">
             <form>
                 <h1>Esto es un login</h1>
-                <input type="email" placeholder="Email"></input>
+                <h4>Email</h4>
+                <input type="email"></input>
                 <br></br>
-                <input type="password" placeholder="Pass"></input>
+                <h4>Password</h4>
+                <input type="password"></input>
                 <br></br>
                 <button>
                     Ingresar
