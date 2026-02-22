@@ -12,7 +12,9 @@ export default function Login() {
                 <h4>Password</h4>
                 <input type="password"></input>
                 <br></br>
-                <button>
+                <button onClick={() => {
+                    
+                }}>
                     Ingresar
                 </button>
             </form>

@@ -1,13 +1,18 @@
 body {
-    background-color: #343434;
+    background-image: url("./imgs/LoginResources/Login_bg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 form {
     margin: auto;
-    max-width: 40%;
+    max-width: 35%;
     margin-top: 100px;
     padding: 50px;
     backdrop-filter: blur(20px);
     border-radius: 20px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 form h1 {

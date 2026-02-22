@@ -1,0 +1,18 @@
+h1 {
+    font-size: 7em;
+    margin: 60px 0 0 0;
+}
+h2 {
+    margin: 0;
+    font-size: 3.5em;
+}
+
+input {
+    width: 70%;
+    max-width: 700px;
+    height: 7vh;
+    border: none;
+    color: white;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
