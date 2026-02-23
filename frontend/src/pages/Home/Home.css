@@ -1,18 +1,20 @@
-h1 {
+.Homepage h1 {
     font-size: 7em;
     margin: 60px 0 0 0;
 }
-h2 {
+.Homepage h2 {
     margin: 0;
     font-size: 3.5em;
 }
 
-input {
+.Homepage input {
+    border-radius: 15px;
     width: 70%;
     max-width: 700px;
     height: 7vh;
-    border: none;
+    background-color: #ffffff39;
+    border: 1px solid rgba(255, 255, 255, 0.578);
     color: white;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(3px);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }

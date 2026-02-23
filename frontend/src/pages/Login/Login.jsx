@@ -4,8 +4,8 @@ import "./Login.css"
 export default function Login() {
     return (
         <div className="login-container">
-            <form>
-                <h1>Esto es un login</h1>
+            <form className="form-login">
+                <h1>Ingresa sesión con tu correo</h1>
                 <h4>Email</h4>
                 <input type="email"></input>
                 <br></br>
