@@ -137,3 +137,45 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# =========================
+# Django / Python
+# =========================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos virtuales
+venv/
+.env/
+.venv/
+
+# Base de datos local
+db.sqlite3
+db.sqlite3-journal
+
+# Archivos de media / uploads (si son locales)
+media/
+uploads/
+posts/
+
+# Archivos estáticos generados
+staticfiles/
+
+# Archivos de migración compilados
+**/migrations/__pycache__/
+
+# =========================
+# IDEs
+# =========================
+
+.idea/
+.vscode/
+
+# =========================
+# Sistema operativo
+# =========================
+
+.DS_Store
+Thumbs.db
