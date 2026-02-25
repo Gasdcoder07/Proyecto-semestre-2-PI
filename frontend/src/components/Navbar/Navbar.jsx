@@ -1,16 +1,28 @@
-import "../Navbar/Navbar.css"
+import { NavItems } from "./NavItems";
 
 function Navbar() {
-    return (
-        <nav className="navbar">
-            <div className="logo">ManzaLife</div>
-            <ul className="nav-links">
-                <li><a>Login</a></li>
-                <li><a>Home</a></li>
-                <li><a>Account</a></li>
-            </ul>
-        </nav>
-    )
+  return (
+    <nav className="w-full bg-white text-black px-10 py-4 flex justify-between items-center shadow-md">
+      
+      <div className="text-2xl font-bold">
+        ManzaLife
+      </div>
+
+      <ul className="flex gap-8">
+        {NavItems.map((item) => (
+          <li key={item.id}>
+            <a 
+              href={item.path}
+              className="hover:text-gray-500 transition duration-300"
+            >
+              {item.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;
