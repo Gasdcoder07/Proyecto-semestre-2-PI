@@ -23,7 +23,7 @@ export default function Login() {
         setError("")
 
         try {
-            const res = await fetch("http://127.0.0.1:8000/api/login", {
+            const res = await fetch("http://127.0.0.1:8000/api/login/", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -34,10 +34,12 @@ export default function Login() {
                 })
             })
 
-            if (!res.ok)
-                throw new Error("Usuario o contraseña incorrectos")
-
             const data = await res.json()
+            console.log("STATUS: ", data.status)
+            console.log("RESPONSE: ", data)
+
+            if (!res.ok)
+                throw new Error(JSON.stringify(data))
 
             localStorage.setItem("access_token", data.access)
             localStorage.setItem("refresh_token", data.refresh)
