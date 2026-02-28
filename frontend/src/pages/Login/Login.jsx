@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css"
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Navbar } from "../../components/index"
+import SideImage from "../../../imgs/LoginResources/Login_hadas.jpeg"
 
 export default function Login() {
 
@@ -54,58 +56,83 @@ export default function Login() {
     }
 
     return (
-        <div className="flex justify-center">
-            <form
-                onSubmit={handleSubmit}
-                className="bg-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.37)] backdrop-blur-2xl px-4 sm:px-6 pb-12 pt-6 rounded-xl border-b border-white relative"
-                
-            >
-                    <h1 className="text-white text-center text-4xl tracking-wide">Inicia sesión</h1>
+        <div className="relative h-screen flex justify-center items-center bg-linear-to-br from-zinc-950 via-zinc-900 to-orange-950 overflow-hidden px-6 py-4 md:px-20 lg:px-32">
+            <Navbar />
 
-                    <div className="mt-6 flex flex-col gap-4 text-white">
-                        <input
-                            className="px-3 py-1.5 border border-white outline-none rounded-sm placeholder-white/80"
-                            type="text"
-                            placeholder="Usuario"
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
-                        />
+            <div className="size-52 bg-orange-500/30 absolute top-4 left-8 rounded-full blur-3xl animate-pulse duration-700 ease-in-out transition-all delay-150" />
 
-                        <div className="relative">
+            <div className="size-52 bg-amber-400/25 absolute bottom-4 left-8 rounded-full blur-3xl animate-pulse duration-700 ease-in-out transition-all delay-500" />
+
+            <div className="size-52 bg-rose-500/20 absolute top-4 right-8 rounded-full blur-3xl animate-pulse duration-700 ease-in-out transition-all delay-300" />
+
+            <div className="size-52 bg-orange-700/25 absolute bottom-4 right-8 rounded-full blur-3xl animate-pulse duration-700 ease-in-out transition-all delay-200" />
+
+            <div className="max-w-3xl flex flex-col md:flex-row rounded-2xl overflow-hidden min-h-1/2">
+                <div className="relative w-full md:w-1/2">
+                    <img
+                        className="h-full w-full object-cover"
+                        src={SideImage}
+                        alt="Side Image"
+                    />
+
+                    <div className="absolute inset-0 bg-black/45" />
+                </div>
+                <div className="w-full md:w-1/2 bg-linear-to-br from-yellow-500 via-amber-600 to-orange-700">
+                    <form 
+                        onSubmit={handleSubmit}
+                        className="text-white px-4 md:px-8 lg:px-12 py-6 flex flex-col gap-8 items-center">
+                        <h3 className="text-3xl text-center font-bold tracking-wide">
+                            Bienvenido de nuevo
+                        </h3>
+
+                        <div className="flex flex-col gap-4 text-white">
                             <input
-                                className="pl-3 pr-10 py-1.5 border border-white outline-none rounded-sm placeholder-white/80"
-                                type={type}
-                                placeholder="Contraseña"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
+                                className="px-3 py-1.5 border border-white outline-none rounded-lg placeholder-white"
+                                type="text"
+                                placeholder="Usuario"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
                             />
 
-                            {
-                                type === "password" ? (
+                            <div className="relative">
+                                <input
+                                    className="pl-3 pr-10 py-1.5 border border-white outline-none rounded-lg placeholder-white w-full"
+                                    type={type}
+                                    placeholder="Contraseña"
+                                    value={password}
+                                    onChange={(e) =>
+                                        setPassword(e.target.value)
+                                    }
+                                />
+
+                                {type === "password" ? (
                                     <FaEye
                                         onClick={() => handleType()}
-                                        className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"/>
+                                        className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"
+                                    />
                                 ) : (
                                     <FaEyeSlash
                                         onClick={() => handleType()}
-                                        className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer hover:text-white ease-in-out transition-colors duration-200"/>
-                                )
-                            }
+                                        className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer hover:text-white ease-in-out transition-colors duration-200"
+                                    />
+                                )}
+                            </div>
+
+                            {error && (
+                                <p className="text-red-600 text-sm">{error}</p>
+                            )}
+
+                            <button
+                                type="submit"
+                                disabled={loading}
+                                className="rounded-lg mt-6 bg-zinc-950 hover:text-orange-600 hover:-translate-y-1 duration-200 ease-in-out transition-all px-6 py-2 tracking-wide cursor-pointer"
+                            >
+                                {loading ? "Cargando..." : "Iniciar sesión"}
+                            </button>
                         </div>
-                        {error && (
-                            <p className="text-red-400 text-sm">{error}</p>
-                        )}
-                    </div>
-
-                    <button 
-                        type="submit"
-                        disabled={loading}
-                        className="text-lg absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white px-6 py-2 rounded-lg tracking-wide text-emerald-600/40 cursor-pointer"
-                    >
-                        {loading ? "Cargando..." : "Login"}
-                    </button>
-            </form>
-
-        </div>    
+                    </form>
+                </div>
+            </div>
+        </div>
     );
 }

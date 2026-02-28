@@ -1,27 +1,31 @@
 import { NavItems } from "./NavItems";
+import { Link } from "react-router";
+import { IoMenu } from "react-icons/io5";
 
 function Navbar() {
   return (
-    <nav className="w-full bg-white text-black px-10 py-4 flex justify-between items-center shadow-md">
-      
-      <div className="text-2xl font-bold">
-        ManzaLife
-      </div>
+      <nav className="absolute top-0 left-0 z-10 w-full border-b border-white">
+          <div className="container mx-auto flex justify-between items-center px-6 py-4 md:px-20 lg:px-32 bg-transparent">
+              <h3 className="text-xl font-bold text-white">ManzaLife</h3>
 
-      <ul className="flex gap-8">
-        {NavItems.map((item) => (
-          <li key={item.id}>
-            <a 
-              href={item.path}
-              className="hover:text-gray-500 transition duration-300"
-            >
-              {item.title}
-            </a>
-          </li>
-        ))}
-      </ul>
+              <ul className="hidden md:flex gap-2 lg:gap-6">
+                  {NavItems.map((item) => {
+                      return (
+                          <li>
+                              <Link
+                                  className="text-white tracking-wider px-3 py-1 hover:text-orange-500 hover:scale-105 transition-all duration-200 ease-in-out inline-block"
+                                  to={item.path}
+                              >
+                                  {item.title}
+                              </Link>
+                          </li>
+                      );
+                  })}
+              </ul>
 
-    </nav>
+              <IoMenu className="text-white text-2xl md:hidden" />
+          </div>
+      </nav>
   );
 }
 
