@@ -1,7 +1,18 @@
 import { FaSearch } from "react-icons/fa"
+import { useState, useEffect } from "react"
 import Image from "../../../imgs/LoginResources/Login_bg.png"
 
 export default function Home() {
+
+    const [publicacion, setPub] = useState([])
+
+    useEffect(() => {
+        fetch("http://127.0.0.1:8000/api/posts/")
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .catch(err => console.error(err))
+    }, [])
+
     return (
         <div className="container mx-auto flex flex-col items-center gap-4 text-slate-950">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
@@ -53,6 +64,14 @@ export default function Home() {
                             <a href="">Link Playa</a>
                         </div>
                     </div>
+                    {
+                        publicacion.map(post => (
+                            <div key={post.title} className="bg-white/10 p-4 rounded-xl">
+                                <h2 className="text-2xl font-bold">{post.title}</h2>
+                                <p>{post.content}</p>
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </div>
