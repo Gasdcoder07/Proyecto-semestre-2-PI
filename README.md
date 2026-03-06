@@ -40,7 +40,7 @@ Sigue estos pasos para configurar el proyecto localmente:
  * Configurar variables de entorno:
    Crea un archivo .env basado en .env.example.
  * Ejecutar la aplicación:
-   nmp run dev  o npm start o
+   nmp run dev  o npm start 
    
 💻 Uso
 Proporcionar ejemplos de cómo utilizar el proyecto. Si es una aplicacion web, puedes poner un ejemplo de endpoint para ver como se puede usar o utilizar el API.
