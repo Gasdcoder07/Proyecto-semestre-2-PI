@@ -15,7 +15,7 @@ Equipo 5
 
 "Pantalla Principal"<img width="1582" height="765" alt="Captura de pantalla 2026-03-06 105606" src="https://github.com/user-attachments/assets/35c67902-7719-4302-b253-94bab04a3956" />
 
-"Panatlla Login"<img width="1596" height="765" alt="Captura de pantalla 2026-03-06 110416" src="https://github.com/user-attachments/assets/ba37fb25-f63e-4063-b901-30eee17c616e" />
+"Pantalla Login"<img width="1596" height="765" alt="Captura de pantalla 2026-03-06 110416" src="https://github.com/user-attachments/assets/ba37fb25-f63e-4063-b901-30eee17c616e" />
 
 ## ✨ Características Principales
 - ✅ Interfaz reponsiva y amigable: Diseñada para que los usuarios puedan utilizarla facilmente desde dispositivos moviles mientras los usuarios esten en movimiento.
@@ -26,15 +26,14 @@ Equipo 5
 Aquí mencionas las herramientas más importantes del proyecto:
 - *Lenguaje:* [Ej. JavaScript, Python, Java]
 - *Framework/Librería:* [Ej. React, Django, Spring Boot]
-- *Base de Datos:* [Ej. PostgreSQL, MongoDB]
+- *Base de Datos:* [Ej. PostgreSQL, MongoDB, MySQL]
 - *Herramientas:* [Ej. Docker, AWS, Git]
 
 ## 🚀 Instalación
 Sigue estos pasos para configurar el proyecto localmente:
 
 1. *Clonar el repositorio:*
-   git clone [https://github.com/tu-usuario/tu-proyecto.git](https://github.com/tu-usuario/tu-proyecto.git)
-
+   git clone [](https://github.com/Gasdcoder07/Proyecto-semestre-2-PI.git)
  * Instalar dependencias:
    npm install  # O el comando que use tu lenguaje (pip install, composer install, etc.)
 
