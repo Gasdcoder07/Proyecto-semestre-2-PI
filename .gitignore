@@ -179,3 +179,66 @@ staticfiles/
 
 .DS_Store
 Thumbs.db
+
+# =========================
+# Extra Python caches (tools modernas)
+# =========================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.hypothesis/
+
+# Archivos compilados adicionales de Python
+*.pyo
+*.pyd
+
+# =========================
+# Bases de datos alternativas
+# =========================
+*.sqlite3
+
+# =========================
+# Archivos generados por collectstatic en producción
+# =========================
+staticfiles/
+mediafiles/
+
+# =========================
+# Uploads dinámicos (mejor ignorar solo archivos)
+# =========================
+backend/posts/*.png
+backend/posts/*.jpg
+backend/posts/*.jpeg
+backend/posts/*.webp
+backend/posts/*.gif
+
+# =========================
+# Vite / React build real
+# =========================
+frontend/dist/
+frontend/.vite/
+
+# =========================
+# Entornos virtuales alternativos
+# =========================
+env/
+ENV/
+.python-version
+
+# =========================
+# IDEs adicionales (por si alguien usa otro editor)
+# =========================
+**/.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# =========================
+# Archivos temporales varios
+# =========================
+*.tmp
+*.temp
+*.swp
+*~

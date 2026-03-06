@@ -1,17 +1,17 @@
 export const NavItems = [
   {
     id: 1,
-    title: "Home",
-    path: "/"
+    title: "Categorias",
+    path: "/#categorias"
   },
   {
     id: 2,
-    title: "Login",
-    path: "/login"
+    title: "Playas",
+    path: "/playas"
   },
   {
     id: 3,
-    title: "Account",
-    path: "/account"
+    title: "Restaurantes",
+    path: "/restaurantes"
   }
 ];
