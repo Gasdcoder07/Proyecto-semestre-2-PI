@@ -77,12 +77,12 @@ export default function Login() {
 
                     <div className="absolute inset-0 bg-black/45" />
                 </div>
-                <div className="w-full md:w-1/2 bg-linear-to-br from-yellow-500 via-amber-600 to-orange-700">
+                <div className="w-full md:w-1/2 bg-linear-to-br from-yellow-500 via-amber-600 to-orange-700 flex justify-center">
                     <form 
                         onSubmit={handleSubmit}
-                        className="text-white px-4 md:px-8 lg:px-12 py-6 flex flex-col gap-8 items-center">
+                        className="text-white px-4 md:px-8 lg:px-12 py-6 flex flex-col gap-8 items-center justify-center">
                         <h3 className="text-3xl text-center font-bold tracking-wide">
-                            Bienvenido de nuevo
+                            Inicia sesión
                         </h3>
 
                         <div className="flex flex-col gap-4 text-white">
@@ -129,6 +129,8 @@ export default function Login() {
                             >
                                 {loading ? "Cargando..." : "Iniciar sesión"}
                             </button>
+
+                            <p className="text-sm text-center tracking-wide">¿No tienes cuenta aún? Registrate</p>
                         </div>
                     </form>
                 </div>
