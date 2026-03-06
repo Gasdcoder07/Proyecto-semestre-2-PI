@@ -41,14 +41,21 @@ Sigue estos pasos para configurar el proyecto localmente:
  * Ejecutar la aplicación:
    nmp run dev  o npm start 
    
-💻 Uso
+## 💻 Uso
 Proporcionar ejemplos de cómo utilizar el proyecto. Si es una aplicacion web, puedes poner un ejemplo de endpoint para ver como se puede usar o utilizar el API.
 
-📁 Estructura del Proyecto
+
+## 📁 Estructura del Proyecto
 Los archivos más importantes para entender la lógica:
  * src/: Contiene el código fuente.
  * docs/: Documentación adicional.
  * tests/: Pruebas unitarias y de integración.
  * config/: Archivos de configuración global.
 
+
+## 🌊 ¡Explora Manzanillo!
+Este proyecto fue creado con el objetivo de facilitar la experiencia de los turistas y locales en nuestro hermoso puerto de Manzanillo.
+Si te gustó el proyecto, considera dejarle una estrellita(⭐) y compartirlo con alguien que planee visitar Manzanillo pronto y pueda planificar muy bien su viaje.
+
+*Hecho con corazon(❤️) en Manzanillo, Colima.*
 
