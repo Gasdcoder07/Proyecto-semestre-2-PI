@@ -33,10 +33,9 @@ Aquí mencionas las herramientas más importantes del proyecto:
 Sigue estos pasos para configurar el proyecto localmente:
 
 1. *Clonar el repositorio:*
-   git clone [](https://github.com/Gasdcoder07/Proyecto-semestre-2-PI.git)
+   git clone [https://github.com/tu-usuario/tu-proyecto.git]([https://github.com/tu-usuario/tu-proyecto.git](https://github.com/Gasdcoder07/Proyecto-semestre-2-PI.git))
  * Instalar dependencias:
    npm install  # O el comando que use tu lenguaje (pip install, composer install, etc.)
-
  * Configurar variables de entorno:
    Crea un archivo .env basado en .env.example.
  * Ejecutar la aplicación:
