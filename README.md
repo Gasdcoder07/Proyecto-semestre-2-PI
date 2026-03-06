@@ -59,3 +59,15 @@ Si te gustó el proyecto, considera dejarle una estrellita(⭐) y compartirlo co
 
 *Hecho con corazon(❤️) en Manzanillo, Colima.*
 
+## 📬 Contacto
+¿Tienes sugerencias, encontrastes un error al navegar o te gustaría saber algo sobre este proyecto? ¡Dime, me encantaría escucharte!
+- *Desarrolladores:*   Diaz Hernandez Axl Enrique
+                       Martinez Contreras Manuel Isahit
+                       Sebastian Silvestre Brian
+                       Serna Dias Greco Alejandro
+                       Vaca Cipres Valentin
+- *Email:*
+                       bsebastian0@ucol.mx
+           
+
+Desarrollado con mucho cariño para resaltar la belleza de Manzanillo. 🌊🌴
