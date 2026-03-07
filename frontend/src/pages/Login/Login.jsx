@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Login.css"
+import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Navbar } from "../../components/index"
 import SideImage from "../../../imgs/LoginResources/Login_hadas.jpeg"
@@ -130,7 +130,9 @@ export default function Login() {
                                 {loading ? "Cargando..." : "Iniciar sesión"}
                             </button>
 
-                            <p className="text-sm text-center tracking-wide">¿No tienes cuenta aún? Registrate</p>
+                            <p className="text-sm text-center tracking-wide">¿No tienes cuenta aún?{" "} 
+                                <Link to={"/register"} className="hover:text-zinc-950 hover:underline transition-colors duration-200 ease-in-out">Registrate</Link>
+                            </p>
                         </div>
                     </form>
                 </div>
