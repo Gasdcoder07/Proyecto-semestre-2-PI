@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import SideImage from "../../../imgs/HomeResources/CentroHisotrico.jpg";
-import { BlogItems } from "./BlogItems";
+import { BlogItems} from "./BlogItems";
+import BlogItem from "./BlogItem";
+import HowItWorksGrid from "./HowItWorksGrid";
 
 const BlogSection = () => {
   return (
@@ -27,20 +29,17 @@ const BlogSection = () => {
 
               <div className="w-full flex flex-col-reverse lg:flex-row justify-center items-center gap-6">
                   <div className="w-full flex flex-col gap-4">
-                    {
-                        BlogItems.map((item) => {
-                            const Icon = item.icon;
+                      {BlogItems.map((item) => {
+                          const Icon = item.icon;
 
-                            return (
-                                <div key={item.id} className="flex items-center gap-4 text-lg">
-                                    <div className="bg-neutral-800 py-2 px-3 rounded-xl flex justify-center items-center">
-                                        <Icon className={`${item.color}`}/>
-                                    </div>
-                                    <p className="tracking-wide">{item.text}</p>
-                                </div>
-                            );
-                        })
-                    }
+                          return (
+                            <BlogItem
+                                key={item.id}
+                                Icon={Icon}
+                                color={item.color}
+                                text={item.text}/>
+                          );
+                      })}
                   </div>
                   <div className="relative w-full">
                       <img
@@ -53,11 +52,17 @@ const BlogSection = () => {
                   </div>
               </div>
 
-              <div className="flex justify-center items-center">
-                <Link className="bg-orange-600 w-1/2 lg:w-1/5 py-2 rounded-md hover:-translate-y-1 hover:text-zinc-950 transition-all duration-200 ease-in-out flex justify-center">
-                    <span>Unete ahora</span>
-                </Link>
+              <div className="flex justify-center items-center my-6">
+                  <Link className="bg-orange-600 w-1/2 lg:w-1/5 py-2 rounded-md hover:-translate-y-1 hover:text-zinc-950 transition-all duration-200 ease-in-out flex justify-center">
+                      <span>Ver ahora</span>
+                  </Link>
               </div>
+
+              <h3 className="text-2xl text-center tracking-wider">
+                  ¿Como funciona?
+              </h3>
+
+              <HowItWorksGrid/>
 
               <hr className="border border-neutral-900" />
           </div>
