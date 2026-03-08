@@ -23,7 +23,6 @@ Equipo 5
 - ✅ Guia: Acesso rapido a los mejores puntos turisticos emblematicos que pueden encontrar de Manzanillo .
 
 ## 🛠 Tecnologías Utilizadas
-Aquí mencionas las herramientas más importantes del proyecto:
 - *Lenguaje:* [Ej. JavaScript, Python, Java]
 - *Framework/Librería:* [Ej. React, Django, Spring Boot]
 - *Base de Datos:* [Ej. PostgreSQL, MongoDB, MySQL]
@@ -42,7 +41,8 @@ Sigue estos pasos para configurar el proyecto localmente:
    nmp run dev  o npm start 
    
 ## 💻 Uso
-Proporcionar ejemplos de cómo utilizar el proyecto. Si es una aplicacion web, puedes poner un ejemplo de endpoint para ver como se puede usar o utilizar el API.
+-
+-
 
 
 ## 📁 Estructura del Proyecto
@@ -60,7 +60,6 @@ Si te gustó el proyecto, considera dejarle una estrellita(⭐) y compartirlo co
 *Hecho con corazon(❤️) en Manzanillo, Colima.*
 
 ## 📬 Contacto
-¿Tienes sugerencias, encontrastes un error al navegar o te gustaría saber algo sobre este proyecto? ¡Dime, me encantaría escucharte!
 - *Desarrolladores:*
 - Diaz Hernandez Axl Enrique
 - Martinez Contreras Manuel Isahit
