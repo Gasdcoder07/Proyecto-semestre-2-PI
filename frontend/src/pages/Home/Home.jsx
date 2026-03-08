@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Header, BlogSection, CategoriesSection, TestimonialsSection, Footer } from "../../components/index"
+import { Header, BlogSection, PostsSection, CategoriesSection, UsSection,TestimonialsSection, CTASection, Footer } from "../../components/index"
 
 export default function Home() {
     const [publicacion, setPub] = useState([]);
@@ -15,8 +15,11 @@ export default function Home() {
         <>
             <Header/>
             <BlogSection/>
+            <PostsSection/>
             <CategoriesSection/>
+            <UsSection/>
             <TestimonialsSection/>
+            <CTASection/>
             <Footer/>
         </>
     );
