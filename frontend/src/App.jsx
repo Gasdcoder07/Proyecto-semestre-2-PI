@@ -1,4 +1,4 @@
-import { Home, Login } from "./pages/index.js"
+import { Home, Login, Register } from "./pages/index.js"
 import { Routes, Route } from 'react-router'
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
               <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/login" element={<Login />} />
+                  <Route path="/register" element={<Register />} />
               </Routes>
           </main>
       </div>
