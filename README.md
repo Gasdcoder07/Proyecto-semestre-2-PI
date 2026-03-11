@@ -1,7 +1,18 @@
-# Proyecto-semestre-2-PI  -- ManzaLife🚀
+# ManzaLife🚀
+
 Equipo 5
 
--Desarrollo de una plataforma web sobre actividades por hacer en el hermoso municipio  de Manzanillo que permita usar a miles de usuarios para poder conocer de manzanillo., desarrollado y programado en visual studio code en lenguaje python y la utilización de Django para acelerar el desarrollo de la aplicacionweb.
+<img width="1582" height="765" alt="Captura de pantalla 2026-03-06 105606" src="https://github.com/user-attachments/assets/35c67902-7719-4302-b253-94bab04a3956" />
+
+![Python 3.12+](https://img.shields.io/badge/Python-3.13%2B-blue?style=for-the-badge&logo=python)
+![Hecho con Django](https://img.shields.io/badge/Hecho%20con-Django-purple?style=for-the-badge&logo=Django)
+![Hecho con React](https://img.shields.io/badge/Hecho%20con-React-orange?style=for-the-badge&logo=React)
+![Hecho con Tailwind](https://img.shields.io/badge/Hecho%20con-Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Status](https://img.shields.io/badge/Estado-En%20Curso-yellow?style=for-the-badge)
+
+---
+
+Desarrollo de una plataforma web que les permita a miles de usuarios conocer Manzanillo. Desarrollado y programado en Django para el backend y React para el frontend.
 
 ## 📋 Tabla de Contenidos
 - [Vista Previa](#-vista-previa)
@@ -18,12 +29,12 @@ Equipo 5
 "Pantalla Login"<img width="1596" height="765" alt="Captura de pantalla 2026-03-06 110416" src="https://github.com/user-attachments/assets/ba37fb25-f63e-4063-b901-30eee17c616e" />
 
 ## ✨ Características Principales
-- ✅ Interfaz reponsiva y amigable: Diseñada para que los usuarios puedan utilizarla facilmente desde dispositivos moviles mientras los usuarios esten en movimiento.
-- ✅ Diseño: Una experiencia fluida que ayuda alos turistas planificar su itineriario sin complicaciones.
-- ✅ Guia: Acesso rapido a los mejores puntos turisticos emblematicos que pueden encontrar de Manzanillo .
+- ✅ Interfaz reponsiva y amigable: Diseñada para que los usuarios puedan utilizarla fácilmente desde dispositivos moviles mientras los usuarios esten en movimiento.
+- ✅ Diseño: Una experiencia fluida que ayuda a los turistas a planificar su itineriario sin complicaciones.
+- ✅ Guia: Acesso rápido a los mejores puntos turisticos emblemáticos que pueden encontrar de Manzanillo .
 
 ## 🛠 Tecnologías Utilizadas
-- *Lenguaje:* [HTML5, Javascript, Css, Python]
+- *Lenguaje:* [HTML5, Javascript, CSS, Python]
 - *Framework/Librería:* [React, Django, Tailwind]
 - *Base de Datos:* [MySQL]
 - *Herramientas:* [Git]
@@ -41,9 +52,10 @@ Sigue estos pasos para configurar el proyecto localmente:
    nmp run dev  o npm start 
    
 ## 💻 Uso
--
--
 
+Este blog está pensado para explorar y compartir ideas sobre cosas por hacer en Manzanillo. Aquí encontrarás recomendaciones de lugares, actividades, eventos y pequeños planes que puedes disfrutar en la zona.
+
+Puedes navegar por las diferentes categorías del blog, descubrir nuevas actividades y leer experiencias o sugerencias que te ayuden a aprovechar mejor tu tiempo en la ciudad.
 
 ## 📁 Estructura del Proyecto
 Los archivos más importantes para entender la lógica:
@@ -55,9 +67,9 @@ Los archivos más importantes para entender la lógica:
 
 ## 🌊 ¡Explora Manzanillo!
 Este proyecto fue creado con el objetivo de facilitar la experiencia de los turistas y locales en nuestro hermoso puerto de Manzanillo.
-Si te gustó el proyecto, considera dejarle una estrellita(⭐) y compartirlo con alguien que planee visitar Manzanillo pronto y pueda planificar muy bien su viaje.
+Si te gustó el proyecto, considera dejarle una estrellita ⭐ y compartirlo con alguien que planeé visitar Manzanillo pronto y pueda planificar muy bien su viaje.
 
-*Hecho con corazon(❤️) en Manzanillo, Colima.*
+*Hecho con corazón ❤️ en Manzanillo, Colima.*
 
 ## 📬 Contacto
 - *Desarrolladores:*
