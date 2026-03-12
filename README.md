@@ -21,6 +21,8 @@ Desarrollo de una plataforma web que les permita a miles de usuarios conocer Man
 - [Instalación](#-instalación)
 - [Uso](#-uso)
 - [Estructura del Proyecto](#-estructura-del-proyecto)
+- [Explora Manzanillo](#explora-manzanillo)
+- [Contacto](#contacto)
 
 ## 📸 Vista Previa
 
