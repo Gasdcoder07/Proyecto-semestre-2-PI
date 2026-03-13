@@ -1,7 +1,8 @@
 import PostActionButton from "./PostActionButton";
 import { MdOutlineDateRange } from "react-icons/md";
+import DefaultAvatar from "../../../imgs/DefaultAvatar.webp"
 
-const PostItem = ({Image, Category, Title, Description, Autor, Date}) => {
+const PostItem = ({Image, Category, Title, Description, AutorAvatar, AutorName, Date}) => {
     return (
         <div className="bg-linear-to-b from-orange-500 via-orange-600 to-orange-700 rounded-xl overflow-hidden max-w-sm hover:-translate-y-1 transition-all duration-200 ease-in-out">
             <div className="relative">
@@ -34,7 +35,13 @@ const PostItem = ({Image, Category, Title, Description, Autor, Date}) => {
                 <hr className="border border-neutral-800 my-2" />
 
                 <div className="flex justify-between items-center text-sm">
-                    <p>{Autor}</p>
+                    <div className="flex gap-2 items-center">
+                        <img
+                            src={AutorAvatar || DefaultAvatar}
+                            alt={AutorName}
+                            className="size-10 rounded-full object-cover border border-neutral-800"/>
+                        <p>{AutorName}</p>
+                    </div>
                     <div className="flex gap-2 items-center">
                         <MdOutlineDateRange />
                         <p>{Date}</p>

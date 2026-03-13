@@ -7,7 +7,23 @@ class CategorySerializer(serializers.ModelSerializer):
         model = Category
         fields = '__all__'
 
+class UserProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserProfile
+        fields = ['bio', 'avatar', 'is_local_business']
+
+class UserSerializer(serializers.ModelSerializer):
+    profile = UserProfileSerializer(source='userprofile', read_only=True)
+
+    class Meta:
+        model = User
+        fields = ['id', 'username', 'email', 'first_name', 'last_name', 'profile']
+        
 class PostSerializer(serializers.ModelSerializer):
+    # -> Que añada categories y users dentro de posts
+    category = CategorySerializer(read_only = True)
+    author = UserSerializer(read_only = True)
+
     class Meta:
         model = Post
         fields = "__all__"
@@ -30,17 +46,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         user = User.objects.create_user(**validated_data)
         return user
     
-class UserProfileSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = UserProfile
-        fields = ['bio', 'avatar', 'is_local_business']
 
-class UserSerializer(serializers.ModelSerializer):
-    profile = UserProfileSerializer(source='userprofile', read_only=True)
-
-    class Meta:
-        model = User
-        fields = ['id', 'username', 'email', 'first_name', 'last_name', 'profile']
 
 class CommentSerializer(serializers.ModelSerializer):
     author_name = serializers.ReadOnlyField(source='author.username')
