@@ -4,11 +4,13 @@ import { usePosts } from "../../hooks/usePosts";
 import { MdArrowDropDown } from "react-icons/md";
 
 export default function Blog() {
-    const posts = usePosts();
+    const {posts, loading} = usePosts();
     const [categoriaActivada, setCategoriaActivada] = useState("Todas");
-    const categorias = ["Todas", ...new Set(posts.map(post => post.category?.name).filter(Boolean))];
+    const categorias = ["Todas", ...new Set(posts.map(post => post.category_name).filter(Boolean))];
     const [dropdownVisible, setDropdownVisible] = useState(false);
-    const postsFinales = categoriaActivada === "Todas" ? posts : posts.filter(post => post.category?.name === categoriaActivada);
+    const postsFinales = categoriaActivada === "Todas" ? posts : posts.filter(post => post.category_name === categoriaActivada);
+
+    if (loading) return <p className="mt-4">Cargando publicaciones...</p>
 
     return (
         <>
