@@ -6,6 +6,8 @@ from django.contrib.auth.models import User
 class Category(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(unique=True) # Útil para URLs amigables (ej: /categoria/playas)
+    icon = models.CharField(max_length=50, default="beach") # -> React Icon
+    image = models.ImageField(upload_to="categories/", null=True, blank=True)
 
     def __str__(self):
         return self.name
