@@ -114,7 +114,9 @@ const BlogNavbar = () => {
                                 BlogSidebarItems.map((item, index) => {
                                     return (
                                         <li key={index}>
-                                            <span className="block text-center text-xl">{item.text}</span>
+                                            <Link to={item.path} onClick={() => setIsOpen(false)}>
+                                                <span className="block text-center text-xl">{item.text}</span>
+                                            </Link>
                                         </li>
                                     )
                                 })
