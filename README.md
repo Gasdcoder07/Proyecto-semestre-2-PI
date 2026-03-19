@@ -76,11 +76,16 @@ Si te gustó el proyecto, considera dejarle una estrellita ⭐ y compartirlo con
 - Diaz Hernandez Axl Enrique
 - Martinez Contreras Manuel Isahit
 - Sebastian Silvestre Brian
-- Serna Dias Greco Alejandro
+- Serna Diaz Greco Alejandro
 - Vaca Cipres Valentin
 
 - *Email:*
+- adiaz106@ucol.mx
+- mmartinez134@ucol.mx
 - bsebastian0@ucol.mx
+- gserna@ucol.mx
+- vvaca2@ucol.mx
+  
            
 
 Desarrollado con mucho cariño para resaltar la belleza de Manzanillo. 🌊🌴
