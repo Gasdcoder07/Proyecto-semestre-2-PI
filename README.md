@@ -1,6 +1,6 @@
 # ManzaLife🚀
 
-Equipo 5
+Equipo 5️⃣
 
 <img width="1582" height="765" alt="Captura de pantalla 2026-03-06 105606" src="https://github.com/user-attachments/assets/35c67902-7719-4302-b253-94bab04a3956" />
 
@@ -24,9 +24,15 @@ Desarrollo de una plataforma web que les permita a miles de usuarios conocer Man
 
 ## 📸 Vista Previa
 
-"Pantalla Principal"<img width="1582" height="765" alt="Captura de pantalla 2026-03-06 105606" src="https://github.com/user-attachments/assets/35c67902-7719-4302-b253-94bab04a3956" />
+"Pantalla Principal"
+<img width="1582" height="765" alt="Captura de pantalla 2026-03-06 105606" src="https://github.com/user-attachments/assets/35c67902-7719-4302-b253-94bab04a3956" />
 
-"Pantalla Login"<img width="1596" height="765" alt="Captura de pantalla 2026-03-06 110416" src="https://github.com/user-attachments/assets/ba37fb25-f63e-4063-b901-30eee17c616e" />
+"Pantalla Login"
+<img width="1596" height="765" alt="Captura de pantalla 2026-03-06 110416" src="https://github.com/user-attachments/assets/ba37fb25-f63e-4063-b901-30eee17c616e" />
+
+"Pantalla Blog"
+<img width="1574" height="757" alt="image" src="https://github.com/user-attachments/assets/6bdd282f-e0cf-49fa-aa41-aa19638595d8" />
+
 
 ## ✨ Características Principales
 - ✅ Interfaz reponsiva y amigable: Diseñada para que los usuarios puedan utilizarla fácilmente desde dispositivos moviles mientras los usuarios esten en movimiento.
@@ -36,19 +42,19 @@ Desarrollo de una plataforma web que les permita a miles de usuarios conocer Man
 ## 🛠 Tecnologías Utilizadas
 - *Lenguaje:* [HTML5, Javascript, CSS, Python]![Python 3.12+].   <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"><img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"><img src="https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"><img src="https://img.shields.io/badge/python%203.12+-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.12+">
 - *Framework/Librería:* [React, Django, Tailwind]![Hecho con Django].   <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React"><img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="TailwindCSS"><img src="https://img.shields.io/badge/django-%23092e20.svg?style=for-the-badge&logo=django&logoColor=white" alt="Django">
-- *Base de Datos:* [MySQL].   <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+- *Base de Datos:* [PostgresSQL, Supabase].   <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"><img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase">
 - *Herramientas:* [Git].   <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git">
 
 ## 🚀 Instalación
 Sigue estos pasos para configurar el proyecto localmente:
 
-Paso 1️⃣. *Clonar el repositorio:*
+- Paso 1️⃣. *Clonar el repositorio:*
    git clone [https://github.com/tu-usuario/tu-proyecto.git]([https://github.com/tu-usuario/tu-proyecto.git](https://github.com/Gasdcoder07/Proyecto-semestre-2-PI.git))
-Paso 2️⃣. * Instalar dependencias:
+- Paso 2️⃣. * Instalar dependencias:
    npm install  # O el comando que use tu lenguaje (pip install, composer install, etc.)
-Paso 3️⃣. * Configurar variables de entorno:
+- Paso 3️⃣. * Configurar variables de entorno:
    Crea un archivo .env basado en .env.example.
-Paso 4️⃣. * Ejecutar la aplicación:
+- Paso 4️⃣. * Ejecutar la aplicación:
    nmp run dev  o npm start 
    
 ## 💻 Uso
@@ -73,11 +79,13 @@ Si te gustó el proyecto, considera dejarle una estrellita ⭐ y compartirlo con
 
 ## 📬 Contacto
 - *Desarrolladores:*
-- NOMBRE: Diaz Hernandez Axl Enrique😄            EMAIL: adiaz106@ucol.mx📲
-- NOMBRE: Martinez Contreras Manuel Isahit😄      EMAIL: mmartinez134@ucol.mx📲
-- NOMBRE: Sebastian Silvestre Brian😄             EMAIL: bsebastian0@ucol.mx📲
-- NOMBRE: Serna Diaz Greco Alejandro😄            EMAIL: gserna@ucol.mx📲
-- NOMBRE: Vaca Cipres Valentin😄                  EMAIL: vvaca2@ucol.mx📲
+- NOMBRE: Diaz Hernandez Axl Enrique😄                    -EMAIL: adiaz106@ucol.mx📲
+- NOMBRE: Martinez Contreras Manuel Isahit😄              -EMAIL: mmartinez134@ucol.mx📲
+- NOMBRE: Sebastian Silvestre Brian😄                     -EMAIL: bsebastian0@ucol.mx📲
+- NOMBRE: Serna Diaz Greco Alejandro😄                    -EMAIL: gserna@ucol.mx📲
+- NOMBRE: Vaca Cipres Valentin😄                          -EMAIL: vvaca2@ucol.mx📲
 
 
 Desarrollado con mucho cariño para resaltar la belleza de Manzanillo. 🌊🌴
+
+A domir ggs nos fuimos💤
