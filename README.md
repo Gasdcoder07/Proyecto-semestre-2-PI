@@ -34,9 +34,8 @@ Desarrollo de una plataforma web que les permita a miles de usuarios conocer Man
 - ✅ Guia: Acesso rápido a los mejores puntos turisticos emblemáticos que pueden encontrar de Manzanillo .
 
 ## 🛠 Tecnologías Utilizadas
-- *Lenguaje:* [HTML5, Javascript, CSS, Python]<img width="224" height="224" alt="image" src="https://github.com/user-attachments/assets/70e6bc5a-93ee-41eb-a768-0bf4c89324b2" /><img width="224" height="224" alt="image" src="https://github.com/user-attachments/assets/1ce113ef-9404-4726-995e-e7aaa8b1c387" />
-
-- *Framework/Librería:* [React, Django, Tailwind]
+- *Lenguaje:* [HTML5, Javascript, CSS, Python]![Python 3.12+](https://img.shields.io/badge/Python-3.13%2B-blue?style=for-the-badge&logo=python)
+- *Framework/Librería:* [React, Django, Tailwind]![Hecho con Django](https://img.shields.io/badge/Hecho%20con-Django-purple?style=for-the-badge&logo=Django)![Hecho con Tailwind](https://img.shields.io/badge/Hecho%20con-Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 - *Base de Datos:* [MySQL]
 - *Herramientas:* [Git]
 
