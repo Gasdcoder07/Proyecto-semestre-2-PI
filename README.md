@@ -24,9 +24,15 @@ Desarrollo de una plataforma web que les permita a miles de usuarios conocer Man
 
 ## 📸 Vista Previa
 
-"Pantalla Principal"<img width="1582" height="765" alt="Captura de pantalla 2026-03-06 105606" src="https://github.com/user-attachments/assets/35c67902-7719-4302-b253-94bab04a3956" />
+"Pantalla Principal"
+<img width="1582" height="765" alt="Captura de pantalla 2026-03-06 105606" src="https://github.com/user-attachments/assets/35c67902-7719-4302-b253-94bab04a3956" />
 
-"Pantalla Login"<img width="1596" height="765" alt="Captura de pantalla 2026-03-06 110416" src="https://github.com/user-attachments/assets/ba37fb25-f63e-4063-b901-30eee17c616e" />
+"Pantalla Login"
+<img width="1596" height="765" alt="Captura de pantalla 2026-03-06 110416" src="https://github.com/user-attachments/assets/ba37fb25-f63e-4063-b901-30eee17c616e" />
+
+"Pantalla Blog"
+<img width="1574" height="757" alt="image" src="https://github.com/user-attachments/assets/6bdd282f-e0cf-49fa-aa41-aa19638595d8" />
+
 
 ## ✨ Características Principales
 - ✅ Interfaz reponsiva y amigable: Diseñada para que los usuarios puedan utilizarla fácilmente desde dispositivos moviles mientras los usuarios esten en movimiento.
