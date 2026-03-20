@@ -1,6 +1,6 @@
 # ManzaLife🚀
 
-Equipo 5
+Equipo 5️⃣
 
 <img width="1582" height="765" alt="Captura de pantalla 2026-03-06 105606" src="https://github.com/user-attachments/assets/35c67902-7719-4302-b253-94bab04a3956" />
 
@@ -36,7 +36,7 @@ Desarrollo de una plataforma web que les permita a miles de usuarios conocer Man
 ## 🛠 Tecnologías Utilizadas
 - *Lenguaje:* [HTML5, Javascript, CSS, Python]![Python 3.12+].   <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"><img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"><img src="https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"><img src="https://img.shields.io/badge/python%203.12+-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.12+">
 - *Framework/Librería:* [React, Django, Tailwind]![Hecho con Django].   <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React"><img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="TailwindCSS"><img src="https://img.shields.io/badge/django-%23092e20.svg?style=for-the-badge&logo=django&logoColor=white" alt="Django">
-- *Base de Datos:* [MySQL].   <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+- *Base de Datos:* [PostgresSQL, Supabase].   <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"><img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase">
 - *Herramientas:* [Git].   <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git">
 
 ## 🚀 Instalación
@@ -81,3 +81,5 @@ Si te gustó el proyecto, considera dejarle una estrellita ⭐ y compartirlo con
 
 
 Desarrollado con mucho cariño para resaltar la belleza de Manzanillo. 🌊🌴
+
+A domir ggs nos fuimos💤
