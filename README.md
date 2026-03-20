@@ -34,13 +34,7 @@ Desarrollo de una plataforma web que les permita a miles de usuarios conocer Man
 - ✅ Guia: Acesso rápido a los mejores puntos turisticos emblemáticos que pueden encontrar de Manzanillo .
 
 ## 🛠 Tecnologías Utilizadas
-- *Lenguaje:* [HTML5, Javascript, CSS, Python]![Python 3.12+].<img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
-
-<img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
-
-<img src="https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-
-<img src="https://img.shields.io/badge/python%203.12+-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.12+">
+- *Lenguaje:* [HTML5, Javascript, CSS, Python]![Python 3.12+].<img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"><img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"><img src="https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"><img src="https://img.shields.io/badge/python%203.12+-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.12+">
 - *Framework/Librería:* [React, Django, Tailwind]![Hecho con Django].
 - *Base de Datos:* [MySQL]
 - *Herramientas:* [Git]
