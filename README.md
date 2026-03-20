@@ -15,12 +15,12 @@ Equipo 5
 Desarrollo de una plataforma web que les permita a miles de usuarios conocer Manzanillo. Desarrollado y programado en Django para el backend y React para el frontend.
 
 ## 📋 Tabla de Contenidos
-- [Vista Previa](#-vista-previa)
-- [Características Principales](#-características-principales)
-- [Tecnologías Utilizadas](#-tecnologías-utilizadas)
-- [Instalación](#-instalación)
-- [Uso](#-uso)
-- [Estructura del Proyecto](#-estructura-del-proyecto)
+- [Vista Previa📷](#-vista-previa)
+- [Características Principales🧾](#-características-principales)
+- [Tecnologías Utilizadas💻](#-tecnologías-utilizadas)
+- [Instalación🛠](#-instalación)
+- [Uso⚙️](#-uso)
+- [Estructura del Proyecto📁](#-estructura-del-proyecto)
 
 ## 📸 Vista Previa
 
@@ -73,19 +73,11 @@ Si te gustó el proyecto, considera dejarle una estrellita ⭐ y compartirlo con
 
 ## 📬 Contacto
 - *Desarrolladores:*
-- Diaz Hernandez Axl Enrique
-- Martinez Contreras Manuel Isahit
-- Sebastian Silvestre Brian
-- Serna Diaz Greco Alejandro
-- Vaca Cipres Valentin
+- NOMBRE:Diaz Hernandez Axl Enrique😄            EMAIL:adiaz106@ucol.mx📲
+- NOMBRE:Martinez Contreras Manuel Isahit😄      EMAIL:mmartinez134@ucol.mx📲
+- NOMBRE:Sebastian Silvestre Brian😄             EMAIL:bsebastian0@ucol.mx📲
+- NOMBRE:Serna Diaz Greco Alejandro😄            EMAIL:gserna@ucol.mx📲
+- NOMBRE:Vaca Cipres Valentin😄                  EMAIL:vvaca2@ucol.mx📲
 
-- *Email:*
-- adiaz106@ucol.mx
-- mmartinez134@ucol.mx
-- bsebastian0@ucol.mx
-- gserna@ucol.mx
-- vvaca2@ucol.mx
-  
-           
 
 Desarrollado con mucho cariño para resaltar la belleza de Manzanillo. 🌊🌴
