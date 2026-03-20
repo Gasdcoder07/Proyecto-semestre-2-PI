@@ -15,12 +15,12 @@ Equipo 5
 Desarrollo de una plataforma web que les permita a miles de usuarios conocer Manzanillo. Desarrollado y programado en Django para el backend y React para el frontend.
 
 ## 📋 Tabla de Contenidos
-- [Vista Previa](#-vista-previa)
-- [Características Principales](#-características-principales)
-- [Tecnologías Utilizadas](#-tecnologías-utilizadas)
-- [Instalación](#-instalación)
-- [Uso](#-uso)
-- [Estructura del Proyecto](#-estructura-del-proyecto)
+- [Vista Previa](#-vista-previa📷)
+- [Características Principales](#-características-principales🧾)
+- [Tecnologías Utilizadas](#-tecnologías-utilizadas💻)
+- [Instalación](#-instalación🛠)
+- [Uso](#-uso⚙️)
+- [Estructura del Proyecto](#-estructura-del-proyecto📁)
 
 ## 📸 Vista Previa
 
