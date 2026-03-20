@@ -34,8 +34,14 @@ Desarrollo de una plataforma web que les permita a miles de usuarios conocer Man
 - ✅ Guia: Acesso rápido a los mejores puntos turisticos emblemáticos que pueden encontrar de Manzanillo .
 
 ## 🛠 Tecnologías Utilizadas
-- *Lenguaje:* [HTML5, Javascript, CSS, Python]![Python 3.12+](https://img.shields.io/badge/Python-3.13%2B-blue?style=for-the-badge&logo=python)
-- *Framework/Librería:* [React, Django, Tailwind]![Hecho con Django](https://img.shields.io/badge/Hecho%20con-Django-purple?style=for-the-badge&logo=Django)![Hecho con Tailwind](https://img.shields.io/badge/Hecho%20con-Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+- *Lenguaje:* [HTML5, Javascript, CSS, Python]![Python 3.12+].<img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+
+<img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+
+<img src="https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+
+<img src="https://img.shields.io/badge/python%203.12+-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.12+">
+- *Framework/Librería:* [React, Django, Tailwind]![Hecho con Django].
 - *Base de Datos:* [MySQL]
 - *Herramientas:* [Git]
 
