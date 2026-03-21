@@ -43,7 +43,7 @@ const UsSection = () => {
               </div>
 
               <div className="flex justify-center">
-                  <ActionButton Text={"Explorar lugares"}/>
+                  <ActionButton Path={"/blog"} Text={"Explorar lugares"}/>
               </div>
 
               <hr className="border border-neutral-900" />

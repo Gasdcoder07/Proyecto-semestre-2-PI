@@ -1,4 +1,4 @@
-import Axlphoto from "../../../imgs/HomeResources/Testimonials/Axl.jpeg"
+import Axlphoto from "../../../imgs/HomeResources/Testimonials/AxlTraje.jpeg"
 import Vaca from "../../../imgs/HomeResources/Testimonials/Valentinxd.jpeg"
 import Grequito from "../../../imgs/HomeResources/Testimonials/Greco.jpeg"
 export const TestimonialItems = [

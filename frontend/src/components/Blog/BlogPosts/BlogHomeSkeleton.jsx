@@ -10,7 +10,7 @@ const BlogHomeSkeleton = () => {
                 {
                     [1, 2, 3, 4, 5].map((item) => {
                         return (
-                            <div className="w-full sm:h-56 bg-white/10 rounded-xl animate-pulse ease-in-out"/>
+                            <div key={item} className="w-full sm:h-56 bg-white/10 rounded-xl animate-pulse ease-in-out"/>
                         )
                     })
                 }

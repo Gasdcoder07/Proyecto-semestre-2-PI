@@ -20,7 +20,7 @@ const CTASection = () => {
               </p>
 
               <div className="flex justify-center">
-                  <ActionButton Path={"/register"} Text={"Crea tu cuenta"} />
+                  <ActionButton Path={"/auth/register"} Text={"Crea tu cuenta"} />
               </div>
 
               <hr className="border border-neutral-900" />

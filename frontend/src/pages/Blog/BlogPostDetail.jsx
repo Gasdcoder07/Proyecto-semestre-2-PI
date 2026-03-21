@@ -37,11 +37,11 @@ const BlogPostDetail = () => {
                     <span>{formatDate(post.created_at)}</span>
                 </div>
 
-                <p className="whitespace-pre-line text-lg font-light tracking-wider">{post.content}</p>
+                <p className="whitespace-pre-line text-lg font-light tracking-wider leading-relaxed">{post.content}</p>
             </div>
         </div>
-        <div className="mt-8">
-                <CommentSection postId={post.id} comments={post.comments}/>
+        <div className="my-8 max-w-xl">
+            <CommentSection postId={post.id} comments={post.comments}/>
         </div>
     </div>
 );
