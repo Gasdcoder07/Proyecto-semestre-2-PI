@@ -3,13 +3,14 @@ import { usePost } from "../../hooks/usePosts";
 import { formatDate } from "../../../utils/formatDate";
 import DefaultAvatar from "../../../imgs/DefaultAvatar.webp"
 import CommentSection from "../../components/CommetsSection/CommentSection";
+import BlogPostDetailSkeleton from "../../components/Blog/BlogPosts/BlogPostDetailSkeleton";
 
 const BlogPostDetail = () => {
     const { slug } = useParams();
     const { post, loading } = usePost(slug);
 
-    if (!post) return <p className="mt-4">No se pudo cargar la publicación</p>
-    if (loading) return <p className="mt-4">Cargando publicación...</p>
+    // if (!post) return <p className="mt-4">No se pudo cargar la publicación</p>
+    if (loading) return <BlogPostDetailSkeleton/>
 
     console.log(post);
 
