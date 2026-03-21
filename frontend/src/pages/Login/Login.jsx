@@ -4,14 +4,13 @@ import { Link } from "react-router-dom";
 import { FaArrowRight, FaEye, FaEyeSlash } from "react-icons/fa";
 import { useAuth } from "../../context/AuthContext";
 import SideImage from "../../../imgs/LoginResources/Login_hadas.jpeg";
-import { FaUser } from "react-icons/fa";
 import Logo from "../../../imgs/logomaxxing.svg";
+import toast from "react-hot-toast";
 
 export default function Login() {
     const [type, setType] = useState("password");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
     const { login } = useAuth();
@@ -24,22 +23,23 @@ export default function Login() {
         e.preventDefault();
 
         if (!username.trim() || !password.trim()) {
-            return setError("Ingresa usuario y contraseña");
+            return toast.error("Ingresa usuario y contraseña");
         }
-
-        setLoading(true);
-        setError("");
+        
+        const toastId = toast.loading("Iniciando sesión");
 
         try {
+            setLoading(true);
             const success = await login({ username, password });
 
             if (success) {
+                toast.success("¡Sesión iniciada correctamente!", { id: toastId })
                 navigate("/blog");
             } else {
-                setError("Usuario o contraseña incorrectos");
+                toast.error("Usuario o contraseña incorrectos", { id: toastId});
             }
         } catch (err) {
-            setError(err.message);
+            console.log(err.message);
         } finally {
             setLoading(false);
         }
@@ -66,10 +66,9 @@ export default function Login() {
 
                         <Link
                             to={"/"}
-                            className="bg-zinc-950 px-3 py-1 rounded-xl flex gap-2 justify-center items-center hover:text-orange-600 hover:-translate-y-1 duration-200 ease-in-out transition-all"
-                        >
-                            <span>Explorar el sitio</span>
-                            <FaArrowRight />
+                            className="text-sm text-white/80 hover:text-white flex items-center gap-2">
+                            <span>Volver al inicio</span>
+                            <FaArrowRight/>
                         </Link>
                     </div>
 
@@ -101,7 +100,7 @@ export default function Login() {
 
                     <div className="flex flex-col gap-4 text-white">
                         <input
-                            className="px-3 py-1.5 border border-white outline-none rounded-lg placeholder-white/80"
+                            className="w-full px-3 py-2 border border-white/40 outline-none rounded-xl placeholder-white/60 font-light"
                             type="text"
                             placeholder="Usuario"
                             value={username}
@@ -110,7 +109,7 @@ export default function Login() {
 
                         <div className="relative">
                             <input
-                                className="pl-3 pr-10 py-1.5 border border-white outline-none rounded-lg placeholder-white/80 w-full"
+                                className="pl-3 pr-10 py-2 border border-white/40 outline-none rounded-xl placeholder-white/60 w-full font-light"
                                 type={type}
                                 placeholder="Contraseña"
                                 value={password}
