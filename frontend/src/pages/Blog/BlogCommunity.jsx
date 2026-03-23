@@ -1,6 +1,13 @@
 import BlogCommunityGrid from "../../components/Blog/BlogCommunity/BlogCommunityGrid";
+import BlogCommunitySkeleton from "../../components/Blog/BlogCommunity/BlogCommunitySkeleton";
+import { useUsers } from "../../hooks/useUsers";
 
 const BlogCommunity = () => {
+    const { users, loading } = useUsers();
+    console.log(users);
+
+    if (loading) return <BlogCommunitySkeleton/>;
+
   return (
     <>
         <div className="mt-4">
@@ -11,7 +18,7 @@ const BlogCommunity = () => {
                     </span>
                 </h3>
         </div>
-        <BlogCommunityGrid Users={[1, 2, 3, 4, 5]}/>
+        <BlogCommunityGrid Users={users}/>
     </>
   );
 };
