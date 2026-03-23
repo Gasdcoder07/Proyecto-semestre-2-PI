@@ -3,12 +3,14 @@ import BlogCategoriesCard from "./BlogCategoriesCard";
 const BlogCategoriesGrid = ({ Categories }) => {
   return (
     <div className="h-full">
-        <div className="flex flex-col py-4 gap-4 w-full">
+        <div className="grid grid-cols-2 py-4 gap-4 w-full">
             {
                 Categories.map((Category, Index) => {
                     return (
                         <BlogCategoriesCard
-                            key={Index}/>
+                            key={Index}
+                            nombre={Category.name}
+                            imagen={Category.image}   />
                     )
                 })
             }
