@@ -2,7 +2,7 @@ import { useParams } from "react-router";
 import { usePost } from "../../hooks/usePosts";
 import { formatDate } from "../../../utils/formatDate";
 import DefaultAvatar from "../../../imgs/DefaultAvatar.webp"
-import CommentSection from "../../components/CommetsSection/CommentSection";
+import CommentSection from "../../components/CommentsSection/CommentSection";
 import BlogPostDetailSkeleton from "../../components/Blog/BlogPosts/BlogPostDetailSkeleton";
 
 const BlogPostDetail = () => {
@@ -29,7 +29,7 @@ const BlogPostDetail = () => {
                     <div className="flex gap-4 justify-center items-center">
                         <img
                             className="rounded-full size-10 object-cover"
-                            src={post.author.profile?.avatar ? post.author.profile.avatar : DefaultAvatar}
+                            src={post.author.avatar ? post.author.avatar : DefaultAvatar}
                             alt={post.author.username} />
                         <span>{post.author.username}</span>
                     </div>
