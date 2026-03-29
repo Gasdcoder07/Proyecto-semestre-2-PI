@@ -1,5 +1,5 @@
 import { IoBackspaceOutline } from "react-icons/io5";
-export default function Keyboard() {
+export default function Keyboard({ onKeyPress }) {
 
     const keyboardRows = [
         ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
@@ -17,6 +17,7 @@ export default function Keyboard() {
                         return (
                             <button
                                 key = {key}
+                                onClick={() => onKeyPress(key)}
                                 className={`
                                     flex items-center justify-center rounded-md font-bold cursor-pointer transition-colors duration-200
                                     bg-orange-800/70 text-white hover:bg-orange-600 h-12 sm:h-14
