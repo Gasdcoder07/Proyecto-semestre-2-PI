@@ -7,7 +7,7 @@ import GameModal from "./GameModal"
 
 export default function ManzaDle() {
 
-    const [solution, setSolution] = useState("PLAYA")
+    const [solution, setSolution] = useState("PUNTOBAHIA")
     const [guesses, setGuesses] = useState(Array(6).fill(null))
     const [currentGuess, setCurrentGuess] = useState("")
     const [turn, setTurn] = useState(0)
@@ -23,7 +23,7 @@ export default function ManzaDle() {
         }
 
         if (key === 'ENTER' || key === 'Enter') {
-            if (currentGuess.length !== 5) return
+            if (currentGuess.length !== solution.length) return
 
             const newGuesses = [...guesses]
             newGuesses[turn] = currentGuess
@@ -42,7 +42,7 @@ export default function ManzaDle() {
         }
 
         if (/^[A-Za-zÑñ]$/.test(key)) {
-            if (currentGuess.length < 5) {
+            if (currentGuess.length < solution.length) {
                 setCurrentGuess((prev) => prev + key.toUpperCase())
             }
         }

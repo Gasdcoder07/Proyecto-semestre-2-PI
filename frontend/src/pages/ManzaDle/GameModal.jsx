@@ -1,8 +1,7 @@
 import { IoClose } from "react-icons/io5"
 
-export default function GameModal() {
+export default function GameModal({ secretWord }) {
     const isWin = true
-    const secretWord = "PLAYA"
     return (
         <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 max-w-sm w-full mx-4 relative shadow-2xl flex flex-col items-center text-center">
             <button 
