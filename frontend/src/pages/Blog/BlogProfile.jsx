@@ -1,11 +1,14 @@
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import EditProfileModal from "../../components/Modals/EditProfileModal";
+import { MdOutlineAddPhotoAlternate } from "react-icons/md";
 import { useState } from "react";
+import ImageProfileModal from "../../components/Modals/ImageProfileModal";
 
 const BlogProfile = () => {
     const { user } = useAuth();
     const [showModal, setShowModal] = useState(false);
+    const [showImageModal, setShowImageModal] = useState(false);
 
     if (!user) return <Navigate to={"/auth/login"}/>;
 
@@ -22,11 +25,20 @@ const BlogProfile = () => {
 
             <div className="px-6 pb-6 space-y-4">
                 <div className="flex justify-center sm:justify-between -mt-20">
-                    <img
-                        className="border-4 border-zinc-950 rounded-full size-32 sm:size-40 object-cover"
-                        src={user.avatar}
-                        alt={user.username}
-                    />
+                    <div className="relative size-32 sm:size-40">
+                        <img
+                            className="border-4 border-zinc-950 rounded-full size-32 sm:size-40 object-cover"
+                            src={user.avatar}
+                            alt={user.username}
+                        />
+                        
+                        <button
+                            onClick={() => setShowImageModal(true)}
+                            className="absolute bottom-0 right-0 -translate-x-full bg-white/10 p-2 rounded-full cursor-pointer hover:bg-white/20 transition-colors duration-200 ease-in-out">
+                            <MdOutlineAddPhotoAlternate/>
+                        </button>
+                    </div>
+
                 </div>
 
                 <div className="flex flex-col gap-4">
@@ -61,6 +73,11 @@ const BlogProfile = () => {
                     last_name={user.last_name}
                     username={user.username}
                     bio={user.bio}/>
+        }
+        {
+            showImageModal &&
+                <ImageProfileModal
+                    setShowImageModal={setShowImageModal}/>
         }
     </div>
   );

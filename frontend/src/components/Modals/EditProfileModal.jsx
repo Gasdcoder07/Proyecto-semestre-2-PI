@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { updateProfile } from '../../services/profileService';
 import toast from 'react-hot-toast';
+import ModalLayout from '../../layouts/ModalLayout';
 
 const EditProfileModal = ({ setShowModal }) => {
     const [loading, setLoading] = useState(false);
@@ -43,7 +44,7 @@ const EditProfileModal = ({ setShowModal }) => {
     console.log(user);
 
   return (
-    <div className="fixed inset-0 bg-black/50 z-20 flex justify-center items-center p-4">
+    <ModalLayout>
         <div className="bg-zinc-950 border border-neutral-700 max-w-sm w-full rounded-xl px-6 py-4 flex flex-col gap-4 text-neutral-300">
             <div className="space-y-2">
                 <h2 className='text-center tracking-wider italic'>Editar perfil</h2>
@@ -95,7 +96,7 @@ const EditProfileModal = ({ setShowModal }) => {
                 </button>
             </div>
         </div>
-    </div>
+    </ModalLayout>
   );    
 };
 

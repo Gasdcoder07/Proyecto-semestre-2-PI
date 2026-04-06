@@ -78,6 +78,9 @@ class PerfilView(APIView):
         user.username = request.data.get("username", user.username)
         profile.bio = request.data.get("bio", profile.bio)
 
+        if 'avatar' in request.FILES:
+            profile.avatar = request.FILES['avatar']
+
         user.save()
         profile.save()
 
