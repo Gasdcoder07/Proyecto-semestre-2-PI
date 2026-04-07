@@ -6,7 +6,7 @@ from django.utils.text import slugify
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
-    slug = models.SlugField(unique=True) # Útil para URLs amigables (ej: /categoria/playas)
+    slug = models.SlugField(unique=True)
     icon = models.CharField(max_length=50, default="beach") # -> React Icon
     image = models.ImageField(upload_to="categories/", null=True, blank=True)
 
@@ -22,7 +22,7 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.TextField(blank=True)
     avatar = models.ImageField(upload_to="avatars/", null=True, blank=True)
-    is_local_business = models.BooleanField(default=False) # Para saber si es dueño de un lugar
+    is_local_business = models.BooleanField(default=False)
     user_type = models.CharField(
         max_length=20,
         choices=USER_TYPES,
@@ -66,7 +66,7 @@ class Post(models.Model):
 class Review(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="reviews")
-    rating = models.IntegerField(choices=[(i, i) for i in range(1, 6)]) # Estrellas del 1 al 5
+    rating = models.IntegerField(choices=[(i, i) for i in range(1, 6)])
     comment = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 

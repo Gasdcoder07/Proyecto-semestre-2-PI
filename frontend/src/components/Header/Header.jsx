@@ -18,15 +18,15 @@ function Header () {
           <div className="absolute inset-0 bg-black/60 -z-20" />
           <div className="absolute inset-0 bg-linear-to-b from-transparent to-zinc-950 -z-10" />
 
-          <div className="text-white flex flex-col items-center gap-4 px-4">
-              <h1 className="text-4xl sm:text-6xl lg:text-8xl text-center tracking-wide">
+          <div className=" flex flex-col items-center gap-4 px-4">
+              <h1 className="text-white text-4xl sm:text-6xl lg:text-8xl text-center tracking-wide">
                   Manza
                   <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-500 to-orange-800">
                       Life
                   </span>
               </h1>
 
-              <h3 className="text-xl sm:text-2xl lg:text-3xl text-center tracking-wider">
+              <h3 className="text-xl text-white/70 sm:text-2xl lg:text-3xl text-center tracking-wider">
                   Un lugar paradisíaco en las costas de México
               </h3>
 
