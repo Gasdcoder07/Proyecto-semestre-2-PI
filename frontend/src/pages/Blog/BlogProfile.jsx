@@ -3,9 +3,11 @@ import EditProfileModal from "../../components/Modals/EditProfileModal";
 import { MdOutlineAddPhotoAlternate } from "react-icons/md";
 import { useEffect, useState } from "react";
 import Banner from "../../../imgs/LoginResources/Login_bg.png";
+import DefaultAvatar from "../../../imgs/DefaultAvatar.webp";
 import ImageProfileModal from "../../components/Modals/ImageProfileModal";
 import { useParams } from "react-router";
 import { getUserByUsername } from "../../services/userService";
+import BlogProfileSkeleton from "../../components/Blog/BlogProfile/BlogProfileSkeleton";
 
 const BlogProfile = () => {
     const { username } = useParams()
@@ -15,14 +17,13 @@ const BlogProfile = () => {
     const [showModal, setShowModal] = useState(false);
     const [showImageModal, setShowImageModal] = useState(false);
 
-    // console.log(user)
     const [profileData, setProfileData] = useState(null);
     const [loading, setLoading] = useState(true);
-
+    
     useEffect(() => {
         const fetchProfileData = async () => {
             setLoading(true);
-
+            
             if (Authorized) {
                 setProfileData(currentUser);
                 setLoading(false);
@@ -38,14 +39,16 @@ const BlogProfile = () => {
                 }
             }
         }
-
+        
         fetchProfileData();
-
+        
     }, [username, currentUser, Authorized]);
-
+    
     if (loading) {
-        return <div>Nel</div>
+        return <BlogProfileSkeleton/>
     }
+    
+    // console.log(user)
 
   return (
     <div className="py-4 flex flex-col gap-4">
@@ -61,7 +64,7 @@ const BlogProfile = () => {
                     <div className="relative size-32 sm:size-40">
                         <img
                             className="border-4 border-zinc-950 rounded-full size-32 sm:size-40 object-cover"
-                            src={profileData.avatar}
+                            src={profileData?.avatar || DefaultAvatar}
                             alt={profileData.username}
                         />
                         {
