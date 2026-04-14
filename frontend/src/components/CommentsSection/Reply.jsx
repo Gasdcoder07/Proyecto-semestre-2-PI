@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Reply = ({ AuthorUsername, AuthorAvatar, Content, CreatedDate }) => {
   return (
     <div className="text-white w-full">
@@ -9,10 +11,13 @@ const Reply = ({ AuthorUsername, AuthorAvatar, Content, CreatedDate }) => {
 
             <div className="flex-1 min-w-0 flex flex-col gap-2">
                 <div className="flex items-center gap-4">
-                    <span
+                    <Link
+                        to={`/blog/profile/${AuthorUsername}`}
                         className="truncate font-bold text-white text-sm hover:text-orange-500 transition-all duration-200 ease-in-out cursor-pointer tracking-wider">
-                        @{AuthorUsername}
-                    </span>
+                        <span>
+                            @{AuthorUsername}
+                        </span>
+                    </Link>
                     <span
                         className="shrink-0 text-zinc-50 text-xs">
                         {new Date(CreatedDate).toLocaleDateString()}
