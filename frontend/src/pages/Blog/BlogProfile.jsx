@@ -124,23 +124,35 @@ const BlogProfile = () => {
                         </div>
                     </div>
                     
-                    <p className="text-neutral-300"><span className="font-bold text-white">10</span> Posts</p>
+                    <p className="text-neutral-300"><span className="font-bold text-white">{posts.length}</span> Posts</p>
                 </div>
             </div>
         </div>
 
-        <div className="border border-neutral-700 rounded-xl px-6 py-4">
+        <div className="border border-neutral-700 rounded-xl px-6 py-4 flex flex-col gap-4">
             <p className="font-semibold">Posts</p>
-{/* 
+
             <div className="flex flex-col gap-4">
                 {
-                    [1, 2, 3, 4, 5].map((i) => {
+                    posts.map((post, index) => {
                         return (
-                            <BlogProfilePost/>
+                            <BlogProfilePost
+                                key={index}
+                                IsAuthorized={Authorized}
+                                PostSlug={post.slug}
+                                PostImage={post.image}
+                                PostName={post.title}
+                                PostCreationDate={post.created_at}/>
                         )
                     })
                 }
-            </div> */}
+
+                {
+                    posts.length === 0 && (
+                        <p className="text-neutral-300 italic">Este usuario no tiene publicaciones disponibles!</p>
+                    )
+                }
+            </div>
 
         </div>
 
