@@ -17,7 +17,7 @@ export default function CreatePost() {
 
     const fileInputRef = useRef(null);
     const [dropdownVisible, setDropdownVisible] = useState(false);
-    const categorias = useCategories();
+    const {categories, loading} = useCategories();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -92,7 +92,7 @@ export default function CreatePost() {
                             <div className="absolute top-full z-10 right-0 mt-2 w-48 max-h-32 overflow-y-auto rounded-xl shadow-lg shadow-orange-600/10 border border-neutral-800 bg-zinc-900 custom-scrollbar">
                                 <ul className="flex flex-col px-4 py-2 gap-2">
                                     {
-                                        categorias.map((item) => {
+                                        categories.map((item) => {
                                             return (
                                                 <li
                                                     className="block rounded-lg hover:bg-zinc-800 px-2 py-1 cursor-pointer"
