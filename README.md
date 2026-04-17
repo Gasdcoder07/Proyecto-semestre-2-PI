@@ -88,6 +88,8 @@ ManzaLife/
 ├── 📂 docs/                  # Documentación técnica, manuales y diagramas
 └── 📄 .env.example           # Plantilla para variables de entorno (DB, Keys)
 
+
+
 ## 🌊 ¡Explora Manzanillo!
 Este proyecto fue creado con el objetivo de facilitar la experiencia de los turistas y locales en nuestro hermoso puerto de Manzanillo.
 Si te gustó el proyecto, considera dejarle una estrellita ⭐ y compartirlo con alguien que planeé visitar Manzanillo pronto y pueda planificar muy bien su viaje.
