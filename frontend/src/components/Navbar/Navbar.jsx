@@ -5,6 +5,7 @@ import { IoClose, IoMenu } from "react-icons/io5";
 import { useState } from "react";
 import logo from "../../../imgs/logomaxxing.svg"
 import { useAuth } from "../../context/AuthContext";
+import UserProfile from "../UserProfile";
 
 function Navbar() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -39,7 +40,11 @@ function Navbar() {
                 }
 
                 {
-                    !user && (
+                    user ? (
+                        <UserProfile
+                            UserAvatar={user.avatar}
+                            Username={user.username}/>
+                    ) : (
                         <li>
                             <Link
                                 to={"/auth/login"}
