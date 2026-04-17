@@ -4,9 +4,13 @@ import { HashLink } from "react-router-hash-link";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { useState } from "react";
 import logo from "../../../imgs/logomaxxing.svg"
+import { useAuth } from "../../context/AuthContext";
 
 function Navbar() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
+    const { user } = useAuth();
+
+    const LoginBtnStyles = 'bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 bg-[length:200%_auto] hover:bg-[position:right_center] text-white tracking-wider px-4 py-2 rounded-md font-semibold transition-all duration-500 ease-in-out inline-block shadow-md hover:shadow-lg hover:-translate-y-0.5';
 
   return (
       <nav className={`${showMobileMenu ? "fixed bg-zinc-950 inset-0" : "absolute top-0 left-0 w-full border-b border-white/30 bg-linear-to-b from-black/10 to-transparent"} z-10 transition-all duration-300`}>
@@ -18,36 +22,35 @@ function Navbar() {
                 <img src={logo} alt="ManzaLife Logo" className="h-12 object-cover select-none"/>
             </Link>
 
-              <ul className={`${showMobileMenu ? "h-full flex flex-col justify-center items-center" : "hidden md:flex"} gap-2 lg:gap-6`}>
-                  {NavItems.map((item) => {
-                      const isLoginBtn = item.title === "Iniciar sesión"
-                      const LinkStyles = (isLoginBtn)
-                      ? 'bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 bg-[length:200%_auto] hover:bg-[position:right_center] text-white tracking-wider px-4 py-2 rounded-md font-semibold transition-all duration-500 ease-in-out inline-block shadow-md hover:shadow-lg hover:-translate-y-0.5'
-                      : 'text-white/90 tracking-wider px-3 py-1 hover:text-orange-400 transition-all duration-200 ease-in-out inline-block'
-                      return (
-                        <li key={item.id}>
-                            {
-                                item.path.includes("#") ? (
-                                    <HashLink
-                                        smooth
-                                        to={item.path}
-                                        onClick={() => setShowMobileMenu(false)}
-                                        className={`${showMobileMenu && !isLoginBtn ? "text-2xl lg:text-3xl" : ""} ${LinkStyles}`}>
-                                        {item.title}
-                                    </HashLink>
-                                ) : (
-                                    <Link
-                                        to={item.path}
-                                        onClick={() => setShowMobileMenu(false)}
-                                        className={`${showMobileMenu && !isLoginBtn ? "text-2xl lg:text-3xl" : ""} ${LinkStyles}`}>
-                                        {item.title}
-                                    </Link>
-                                )
-                            }
+            <ul className={`${showMobileMenu ? "h-full flex flex-col justify-center items-center" : "hidden md:flex"} text-white gap-2 lg:gap-6`}>
+                {
+                    NavItems.map((item) => {
+                        return (
+                            <li key={item.id}>
+                                <Link
+                                    to={item.path}
+                                    onClick={() => setShowMobileMenu(false)}
+                                    className="tracking-wider px-4 py-2 hover:text-orange-500 transition-all duration-200 ease-in-out inline-block">
+                                    {item.title}
+                                </Link>
+                            </li>
+                        )
+                    })
+                }
+
+                {
+                    !user && (
+                        <li>
+                            <Link
+                                to={"/auth/login"}
+                                onClick={() => setShowMobileMenu(false)}
+                                className={LoginBtnStyles}>
+                                Iniciar sesión
+                            </Link>
                         </li>
-                      );
-                  })}
-              </ul>
+                    )
+                }
+            </ul>
 
               {
                 showMobileMenu ? 
