@@ -68,24 +68,23 @@ Sigue estos pasos para configurar el proyecto localmente:
 4.Admin: Accede a /admin para gestionar el contenido (solo personal autorizado).
 
 ## 📁 Estructura del Proyecto
-
 ManzaLife/
-├── 📂 backend/               # Lógica del servidor y API (Django)
-│   ├── 📁 core/              # Configuración principal (settings, urls, wsgi)
-│   ├── 📁 api/               # Endpoints, Serializers y Viewsets
-│   ├── 📁 blog/              # Modelos y lógica para los artículos
-│   └── 📄 manage.py          # Utilidad de línea de comandos de Django
+├── 📂 backend/                — Lógica de servidor y API
+│ ├── 📁 core/                 — Configuración de Django (settings, wsgi)
+│ ├── 📁 api/                  — Endpoints y Serializers
+│ ├── 📁 blog/                 — Modelo de datos para artículos
+│ └── 📄 manage.py             — Gestor de comandos
 │
-├── 📂 frontend/              # Interfaz de usuario (React + Vite/CRA)
-│   ├── 📁 src/
-│   │   ├── 📁 components/    # Elementos UI reutilizables (Navbar, Cards, Buttons)
-│   │   ├── 📁 pages/         # Vistas completas (Home, Login, Blog, Admin)
-│   │   └── 📁 api/           # Configuración de Axios y llamadas a servicios
-│   ├── 📁 public/            # Archivos estáticos públicos
-│   └── 📄 tailwind.config.js # Configuración de estilos Tailwind CSS
+├── 📂 frontend/               — Interfaz de usuario
+│ ├── 📁 src/
+│ │ ├── 📁 components/         — Componentes reutilizables (Navbar, Footer)
+│ │ ├── 📁 pages/              — Vistas (Home, Login, Blog)
+│ │ └── 📁 api/                — Configuración de Axios
+│ ├── 📁 public/               — Archivos estáticos
+│ └── 📄 tailwind.config.js    — Estilos y diseño
 │
-├── 📂 docs/                  # Documentación técnica, manuales y diagramas
-└── 📄 .env.example           # Plantilla para variables de entorno (DB, Keys)
+├── 📂 docs/                   — Documentación técnica y diagramas
+└── 📄 .env.example            — Plantilla de variables de entorno
 
 ## 🌊 ¡Explora Manzanillo!
 Este proyecto fue creado con el objetivo de facilitar la experiencia de los turistas y locales en nuestro hermoso puerto de Manzanillo.
