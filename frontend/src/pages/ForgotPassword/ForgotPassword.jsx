@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import api from "../../api/axios.js"
 import toast from "react-hot-toast";
+import { supabase } from "../../../utils/supabaseClient.js"
 
 export default function ForgotPassword() {
   
@@ -25,10 +26,18 @@ export default function ForgotPassword() {
       setEmailInput(e.target.value)
     }
 
-    const handleSubmmit = (e) => {
+    const handleSubmmit = async (e) => {
       e.preventDefault()
       if (email.includes(emailInput)) {
-        console.log("si existe")
+        toast.success("si existe")
+        const { error } = await supabase.auth.resetPasswordForEmail(emailInput, {
+          redirectTo: 'http://localhost:5173/auth/resetpassword',
+        })
+        if (error) {
+          toast.error("Error: " + error.message)
+        } else {
+          toast.success("!Revisa tu bandeja de entrada!")
+        }
       } else {
         toast.error("Lo siento pero no existe ese correo")
       }

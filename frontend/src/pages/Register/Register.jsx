@@ -7,6 +7,7 @@ import Logo from "../../../imgs/logomaxxing.svg";
 import { sliderContent } from "./sliderContent";
 import { StepOne, StepTwo } from "../../components/Register/index"
 import validatePassword from "../../../utils/validatePassword.js"
+import { supabase } from "../../../utils/supabaseClient.js"
 
 export default function Register() {
     const { register } = useAuth();
@@ -68,13 +69,28 @@ export default function Register() {
 
         try {
             setLoading(true);
+            
+            const { data: authData, error: authError } = await supabase.auth.signUp({
+              email: formData.email,
+              password: formData.password,
+            })
+            
+            if (authError) {
+              toast.error("Error de seguridad: " + authError.message, { id: toastId })
+              setLoading(false)
+              return
+            }
+
             const res = await register(formData);
+
             if (res.success) {
                 toast.success("¡Cuenta creada exitosamente!", { id: toastId });
                 navigate("/auth/login");
             } else {
                 toast.error(res.message || "Error al crear la cuenta");
             }
+        } catch (error) {
+          toast.error(`Hubo un error inesperado. ${error}`, { id: toastId })
         } finally {
             setLoading(false);
         }
