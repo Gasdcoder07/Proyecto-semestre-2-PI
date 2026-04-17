@@ -69,22 +69,54 @@ Sigue estos pasos para configurar el proyecto localmente:
 
 ## 📁 Estructura del Proyecto
 ManzaLife/
-├── 📂 backend/                — Lógica de servidor y API
-│ ├── 📁 core/                 — Configuración de Django (settings, wsgi)
-│ ├── 📁 api/                  — Endpoints y Serializers
-│ ├── 📁 blog/                 — Modelo de datos para artículos
-│ └── 📄 manage.py             — Gestor de comandos
+
+
+├── 📂 backend/ # Lógica de servidor y API
+
+
+│   ├── 📁 core/ # Configuración de Django
+
+
+│   ├── 📁 api/ # Endpoints y Serializers
+
+
+│   ├── 📁 blog/ # Modelos de artículos
+
+
+│   └── 📄 manage.py
+
+
 │
-├── 📂 frontend/               — Interfaz de usuario
-│ ├── 📁 src/
-│ │ ├── 📁 components/         — Componentes reutilizables (Navbar, Footer)
-│ │ ├── 📁 pages/              — Vistas (Home, Login, Blog)
-│ │ └── 📁 api/                — Configuración de Axios
-│ ├── 📁 public/               — Archivos estáticos
-│ └── 📄 tailwind.config.js    — Estilos y diseño
+
+
+├── 📂 frontend/ # Interfaz de usuario (React)
+
+
+│   ├── 📁 src/
+
+
+│   │   ├── 📁 components/ # Navbar, Footer, etc.
+
+
+│   │   ├── 📁 pages/ # Home, Login, Blog
+
+
+│   │   └── 📁 api/ # Configuración Axios
+
+
+│   ├── 📁 public/
+
+
+│   └── 📄 tailwind.config.js
+
+
 │
-├── 📂 docs/                   — Documentación técnica y diagramas
-└── 📄 .env.example            — Plantilla de variables de entorno
+
+
+├── 📂 docs/ # Documentación y diagramas
+
+
+└── 📄 .env.example # Variables de entorno
 
 ## 🌊 ¡Explora Manzanillo!
 Este proyecto fue creado con el objetivo de facilitar la experiencia de los turistas y locales en nuestro hermoso puerto de Manzanillo.
