@@ -9,12 +9,12 @@ const BlogSection = () => {
   return (
       <section
           id="blog"
-          className="bg-zinc-950 text-white py-4 md:py-10 lg:py-12"
+          className="dark:bg-zinc-950 text-black dark:text-white py-4 md:py-10 lg:py-12"
       >
           <div className="container mx-auto flex flex-col px-6 md:px-20 lg:px-32 gap-4 md:gap-10 lg:gap-12">
               <SectionTitle Title={"Blog"}/>
 
-              <h3 className="text-white text-4xl text-center">
+              <h3 className="text-black dark:text-white text-4xl text-center">
                   El{" "}
                   <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-500 to-orange-800">
                       blog
@@ -38,12 +38,12 @@ const BlogSection = () => {
                   </div>
                   <div className="relative w-full">
                       <img
-                          className="h-full object-cover rounded-2xl"
+                          className="h-full object-cover rounded-2xl shadow-xl"
                           src={SideImage}
                           alt="Centro histórico"
                       />
 
-                      <div className="absolute inset-0 bg-linear-to-r from-zinc-950/70 via-zinc-950/30 to-zinc-950/70" />
+                      <div className="absolute inset-0 dark:bg-linear-to-r from-zinc-950/70 via-zinc-950/30 to-zinc-950/70" />
                   </div>
               </div>
 
