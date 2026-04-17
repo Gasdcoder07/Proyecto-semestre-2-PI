@@ -3,6 +3,7 @@ import { useCategories } from "../../hooks/useCategories";
 import { postPost } from "../../services/postService";
 import toast from "react-hot-toast";
 import { MdArrowDropDown, MdAdd, MdOutlineImage, MdShortText, MdClose, MdPublish, MdSave } from "react-icons/md";
+import validateText from "../../../utils/validateText.js"
 
 export default function CreatePost() {
     const [formData, setFormData] = useState({
@@ -46,6 +47,8 @@ export default function CreatePost() {
         if (!formData.title.trim()) return toast.error("El titulo es obligatorio");
         if (!formData.image) return toast.error("Debes subir una foto para la publicación");
         if (!formData.content.trim()) return toast.error("La descripción no puede estar vacía");
+        console.log(formData.content)
+        if (validateText(formData.content)) return toast.error("Incluye malas palabras tu texto");
 
         const toastId = toast.loading("Creando publicación");
 
