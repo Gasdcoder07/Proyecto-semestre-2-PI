@@ -31,14 +31,14 @@ const BlogNavbar = () => {
                         className="text-2xl"/>
                 </div>
 
-                <div className="relative w-full max-w-2xl text-white mx-auto flex justify-center items-center">
+                {/* <div className="relative w-full max-w-2xl text-white mx-auto flex justify-center items-center">
                     <input
                         className="bg-neutral-900 border border-neutral-700 rounded-xl w-full py-3 pl-5 pr-10 outline-none placeholder-white/50"
                         type="text"
                         placeholder="Playas, plazas o restaurantes"
                     ></input>
                     <FaSearch className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer hover:text-orange-500 hover:rotate-45 transition-all ease-in-out duration-200" />
-                </div>
+                </div> */}
 
                 <div className="flex justify-center items-center gap-4 shrink-0">
                     <Link to={user ? "/create-post" : "/auth/login"} className="hover:text-orange-600 transition-colors duration-200 ease-in-out">
