@@ -23,9 +23,11 @@ const BlogProfilePost = ({ IsAuthorized = false, PostSlug, PostImage, PostName, 
                 {
                     IsAuthorized && (
                         <div className="shrink-0 flex justify-end gap-4">
-                            <button className="cursor-pointer transition-all duration-200 ease-in-out hover:text-yellow-600">
-                                <MdModeEdit/>
-                            </button>
+                            <Link to={`/edit-post/${PostSlug}`}>
+                                <button className="cursor-pointer transition-all duration-200 ease-in-out hover:text-yellow-600">
+                                    <MdModeEdit/>
+                                </button>
+                            </Link>
 
                             <button className="cursor-pointer transition-all duration-200 ease-in-out hover:text-red-600">
                                 <MdDelete/>

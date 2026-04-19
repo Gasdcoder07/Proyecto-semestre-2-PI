@@ -1,11 +1,14 @@
-import { useState, useRef } from "react";
-import { useCategories } from "../../hooks/useCategories";
-import { postPost } from "../../services/postService";
+import { useState, useRef, useEffect } from "react";
+import { useCategories } from "../../hooks/useCategories.js";
+import { postPost, updatePost } from "../../services/postService.js";
 import toast from "react-hot-toast";
 import { MdArrowDropDown, MdAdd, MdOutlineImage, MdShortText, MdClose, MdPublish, MdSave } from "react-icons/md";
 import validateText from "../../../utils/validateText.js"
+import { useNavigate } from "react-router";
 
-export default function CreatePost() {
+export default function PostForm({ mode, PostData = null }) {
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState({
         title: "",
         content: "",
@@ -15,6 +18,20 @@ export default function CreatePost() {
         imagePreview: null,
         status: ""
     })
+
+    useEffect(() => {
+        if (mode === "edit" && PostData) {
+            setFormData({
+                title: PostData.title || "",
+                content: PostData.content || "",
+                category_id: PostData.category?.id || null,
+                category_name: PostData.category_name || "Seleccionar categoría",
+                image: null,
+                imagePreview: PostData.image || null,
+                imageDeleted : false
+            });
+        }
+    }, [mode, PostData]);
 
     const fileInputRef = useRef(null);
     const [dropdownVisible, setDropdownVisible] = useState(false);
@@ -38,35 +55,63 @@ export default function CreatePost() {
 
     const removeImage = (e) => {
         e.stopPropagation();
-        setFormData(prev => ({ ...prev, image: null, imagePreview: null}))
+        setFormData(prev => ({
+            ...prev,
+            image: null,
+            imagePreview: null,
+            imageDeleted: true
+        }));
+
         if (fileInputRef.current) fileInputRef.current.value = "";
     }
 
     const handleGuardarPost = async (status) => {
         if (!formData.category_id) return toast.error("Selecciona una categoría valida");
         if (!formData.title.trim()) return toast.error("El titulo es obligatorio");
-        if (!formData.image) return toast.error("Debes subir una foto para la publicación");
+        if (mode === "create" && !formData.image) return toast.error("Debes subir una foto para la publicación");
         if (!formData.content.trim()) return toast.error("La descripción no puede estar vacía");
         console.log(formData.content)
         if (validateText(formData.content)) return toast.error("Incluye malas palabras tu texto");
 
-        const toastId = toast.loading("Creando publicación");
+        const toastId = toast.loading(mode === "create" ? "Creando publicación..." : "Actualizando publicación...");
+
+        const finalData = new FormData();
+
+        finalData.append("title", formData.title);
+        finalData.append("content", formData.content);
+        finalData.append("category_id", formData.category_id);
+        finalData.append("status", status);
+
+        if (formData.image) {
+            finalData.append("image", formData.image);
+        }
+
+        if (formData.imageDeleted && !formData.image) {
+            finalData.append("image", "");
+        }
 
         try {
-            await postPost({ ...formData, status: status });
-            toast.success("¡Post creado exitosamente!", { id: toastId })
+            let response;
 
-            setFormData({
-                title: "", content: "", category_id: null, category_name: "Seleccionar categoría",
-                image: null, imagePreview: null
-            })
+            if (mode === "create") {
+                response = await postPost(finalData);
+            } else {
+                response = await updatePost(PostData.slug, finalData);
+            }
+
+            toast.success(
+                mode === "create" ? "¡Post creado exitosamente!" : "Post actualizado",
+                { id: toastId }
+            );
+
+            navigate(`/blog/${response.slug}`)
 
         } catch (error) {
             if (error.response) {
                 console.error("Error en ", error.response)
                 alert(`Error del backend: ${JSON.stringify(error.response.data)}`);
             } else {
-                console.error(`Error al crear el post: ${error}`)
+                console.error(`Error al crear o actualizar el post: ${error}`)
             }
         }
     };
@@ -75,7 +120,7 @@ export default function CreatePost() {
         <div className="flex flex-col justify-center items-center gap-4 py-12">
             <div className="flex flex-col justify-center items-center gap-4">
                 <h3 className="text-center text-2xl text-orange-600 tracking-wide">
-                    Empieza a publicar ahora
+                    { mode === "create" ? "Empieza a publicar ahora" : "Edita tu publicación"}
                 </h3>
                 <MdArrowDropDown className="text-4xl text-neutral-700 animate-bounce transition-all duration-300 ease-in-out" />
             </div>
