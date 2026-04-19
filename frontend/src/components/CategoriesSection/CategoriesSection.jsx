@@ -2,24 +2,28 @@ import CategoriesGrid from "./CategoriesGrid";
 import ActionButton from "../ActionButton";
 import SectionTitle from "../SectionTitle";
 
+import { useLanguage } from "../../context/LanguageContext";
+
 const CategoriesSection = () => {
+  const { textos } = useLanguage();
+
   return (
       <section id="categorias" className="min-h-screen bg-zinc-950 py-4 md:py-10 lg:py-12">
           <div className="container mx-auto flex flex-col px-6 md:px-20 lg:px-32 gap-8 md:gap-10 lg:gap-12">
 
-            <SectionTitle Title={"Categorías"}/>
+            <SectionTitle Title={textos.categorias.titulo}/>
 
               <h3 className="text-white text-4xl text-center">
-                  Nuestras{" "}
+                  {textos.categorias.subtitulo.split(" ")[0]}{" "}
                   <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-500 to-orange-800">
-                      categorías
+                      {textos.categorias.subtitulo.split(" ")[1]}
                   </span>
               </h3>
 
                 <CategoriesGrid/>
 
                 <div className="flex justify-center items-center">
-                    <ActionButton Path={"/blog/categories"} Text={"Explorar categorías"}/>
+                    <ActionButton Path={"/blog/categories"} Text={textos.categorias.boton}/>
                 </div>
 
               {/* <hr className="border border-neutral-900"/> */}

@@ -6,16 +6,19 @@ import { toastContainerStyle, toastOptionsConfig } from './config/toastConfig.js
 import './index.css'
 import App from './App.jsx'
 import { AuthProvider } from './context/AuthContext.jsx'
+import { LanguageProvider } from './context/LanguageContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
         <AuthProvider>
-            <Toaster
-                position='top-right'
-                containerStyle={toastContainerStyle}
-                toastOptions={toastOptionsConfig}/>
-            <App />
+            <LanguageProvider>
+                <Toaster
+                    position='top-right'
+                    containerStyle={toastContainerStyle}
+                    toastOptions={toastOptionsConfig}/>
+                <App />
+            </LanguageProvider>
         </AuthProvider>
     </BrowserRouter>
   </StrictMode>

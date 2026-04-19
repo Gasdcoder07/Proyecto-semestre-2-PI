@@ -1,0 +1,105 @@
+{
+  "navbar": {
+    "blog": "Blog",
+    "categorias": "Categorías",
+    "testimonios": "Testimonios",
+    "manzadle": "ManzaDle",
+    "login": "Iniciar sesión"
+  },
+  "landing": {
+    "subtitulo": "Un lugar paradisíaco en las costas de México",
+    "placeholder_busqueda": "Playas, plazas o restaurantes"
+  },
+  "blog": {
+    "titulo_principal": "El blog más grande de Manzanillo",
+    "frase1": "Comparte lugares hermosos.",
+    "frase2": "Encuentra rincones únicos.",
+    "frase3": "Promociona tu negocio local.",
+    "frase4": "Ayuda a otros a descubrir la ciudad.",
+    "categoria": "Centro histórico",
+    "boton": "Ver ahora",
+    "como_funciona": "¿Cómo funciona?",
+    "como_funciona_items": [
+      {
+        "titulo": "Explora",
+        "descripcion": "Descubre artículos y contenido sobre Manzanillo."
+      },
+      {
+        "titulo": "Crea",
+        "descripcion": "Regístrate gratis y forma parte de la comunidad."
+      },
+      {
+        "titulo": "Comparte",
+        "descripcion": "Publica y promociona negocios o lugares locales."
+      },
+      {
+        "titulo": "Interactúa",
+        "descripcion": "Comenta, opina y conecta con otros usuarios."
+      },
+      {
+        "titulo": "Apoya",
+        "descripcion": "Ayuda a impulsar los negocios y lugares locales."
+      },
+      {
+        "titulo": "Crece",
+        "descripcion": "Haz crecer tu negocio o proyecto local."
+      }
+    ]
+  },
+  "posts": {
+    "titulo": "Publicaciones",
+    "subtitulo": "Publicaciones recientes"
+  },
+  "categorias": {
+    "titulo": "Categorías",
+    "subtitulo": "Nuestras categorías",
+    "boton": "Explorar categorías"
+  },
+  "nosotros": {
+    "titulo": "Nosotros",
+    "subtitulo": "¿Por qué explorar con nosotros?",
+    "descripcion": "En ManzaLife te ayudamos a descubrir lo mejor de Manzanillo. Compartimos recomendaciones reales, lugares imperdibles y experiencias para que disfrutes al máximo tu visita.",
+    "boton": "Explorar lugares"
+  },
+  "testimonials": {
+    "titulo": "Testimonios",
+    "subtitulo": "Testimonios de nuestros usuarios"
+  },
+    "cta": {
+  "titulo": "Únete",
+  "subtitulo": "a nuestra comunidad",
+  "descripcion": "Forma parte de ManzaLife y comparte tus experiencias en Manzanillo.",
+  "boton": "Registrarse"
+},
+"footer": {
+  "blog": {
+    "titulo": "Blog",
+    "items": ["El blog más grande de Manzanillo"]
+  },
+  "posts": {
+    "titulo": "Publicaciones",
+    "items": ["Publicaciones recientes"]
+  },
+  "categorias": {
+    "titulo": "Categorías",
+    "items": ["Nuestras categorías"]
+  },
+  "nosotros": {
+    "titulo": "Nosotros",
+    "items": ["¿Por qué explorar con nosotros?"]
+  },
+  "testimonios": {
+    "titulo": "Testimonios",
+    "items": ["Testimonios de nuestros usuarios"]
+  },
+  "cta": {
+    "titulo": "Únete",
+    "items": ["Únete a la comunidad"]
+  },
+  "derechos": "© 2026 ManzaLife. Todos los derechos reservados."
+}
+}
+
+
+
+

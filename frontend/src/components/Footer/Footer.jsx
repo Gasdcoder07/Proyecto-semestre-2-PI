@@ -1,8 +1,11 @@
 import { HashLink } from 'react-router-hash-link';
 import logo from "../../../imgs/logomaxxing.svg";
 import { FooterItems, FooterIconsItems } from "./FooterItems";
+import { useLanguage } from "../../context/LanguageContext";
 
 const Footer = () => {
+    const { textos } = useLanguage();
+
     return (
         <footer className="text-white bg-zinc-950 py-5">
             <div className="container mx-auto flex flex-col px-6 py-4 md:px-20 lg:px-32 gap-6">
@@ -33,17 +36,19 @@ const Footer = () => {
                             return (
                                 <div key={index} className="flex flex-col gap-1">
                                     <p className="font-bold">
-                                        {item.title}
+                                        {textos.footer[item.key]?.titulo || item.title}
                                     </p>
                                     <ul>
                                         {
-                                            item.subthemes.map((item, index) => {
+                                            item.subthemes.map((sub, i) => {
                                                 return (
-                                                    <li key={index}>
+                                                    <li key={i}>
                                                         <HashLink
-                                                            to={item.path}
+                                                            to={sub.path}
                                                             className='text-neutral-400 text-[15px] hover:text-neutral-500 duration-200 transition-all ease-in-out cursor-pointer'>
-                                                            <span>{item.title_theme}</span>
+                                                            <span>
+                                                                {textos.footer[item.key]?.items[i] || sub.title_theme}
+                                                            </span>
                                                         </HashLink>
                                                     </li>
                                                 );
@@ -59,8 +64,7 @@ const Footer = () => {
                 <hr className="border border-neutral-900" />
 
                 <p className="text-center text-sm">
-                    © {new Date().getFullYear()} ManzaLife. Todos los derechos
-                    reservados.
+                    {textos.footer.derechos}
                 </p>
             </div>
         </footer>
