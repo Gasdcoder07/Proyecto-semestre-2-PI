@@ -20,6 +20,7 @@ export const FooterIconsItems = [
 
 export const FooterItems = [
     {
+        key: "blog",
         title: "Blog",
         subthemes: [
             {
@@ -29,6 +30,7 @@ export const FooterItems = [
         ]
     },
     {
+        key: "posts",
         title: "Publicaciones",
         subthemes: [
             {
@@ -38,6 +40,7 @@ export const FooterItems = [
         ]
     },
     {
+        key: "categorias",
         title: "Categorías",
         subthemes: [
             {
@@ -47,6 +50,7 @@ export const FooterItems = [
         ]
     },
     {
+        key: "nosotros",
         title: "Nosotros",
         subthemes: [
             {
@@ -56,6 +60,7 @@ export const FooterItems = [
         ]
     },
     {
+        key: "testimonios",
         title: "Testimonios",
         subthemes: [
             {
@@ -65,6 +70,7 @@ export const FooterItems = [
         ]
     },
     {
+        key: "cta",
         title: "Únete",
         subthemes: [
             {
@@ -72,5 +78,5 @@ export const FooterItems = [
                 path: "#unete"
             }
         ]
-    },
+    }
 ];

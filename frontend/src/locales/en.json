@@ -1,0 +1,102 @@
+{
+  "navbar": {
+    "blog": "Blog",
+    "categorias": "Categories",
+    "testimonios": "Testimonials",
+    "manzadle": "ManzaDle",
+    "login": "Login"
+  },
+  "landing": {
+    "subtitulo": "A paradise on the coasts of Mexico",
+    "placeholder_busqueda": "Beaches, plazas or restaurants"
+  },
+  "blog": {
+    "titulo_principal": "The biggest blog in Manzanillo",
+    "frase1": "Share beautiful places.",
+    "frase2": "Discover unique spots.",
+    "frase3": "Promote your local business.",
+    "frase4": "Help others discover the city.",
+    "categoria": "Historic center",
+    "boton": "View now",
+    "como_funciona": "How does it work?",
+    "como_funciona_items": [
+      {
+        "titulo": "Explore",
+        "descripcion": "Discover articles and content about Manzanillo."
+      },
+      {
+        "titulo": "Create",
+        "descripcion": "Sign up for free and join the community."
+      },
+      {
+        "titulo": "Share",
+        "descripcion": "Post and promote local businesses or places."
+      },
+      {
+        "titulo": "Interact",
+        "descripcion": "Comment and connect with other users."
+      },
+      {
+        "titulo": "Support",
+        "descripcion": "Help boost local businesses and places."
+      },
+      {
+        "titulo": "Grow",
+        "descripcion": "Grow your local business or project."
+      }
+    ]
+  },
+  "posts": {
+    "titulo": "Posts",
+    "subtitulo": "Recent"
+  },
+  "categorias": {
+    "titulo": "Categories",
+    "subtitulo": "Our categories",
+    "boton": "Explore categories"
+  },
+  "nosotros": {
+    "titulo": "About us",
+    "subtitulo": "Why explore with us?",
+    "descripcion": "At ManzaLife we help you discover the best of Manzanillo. We share real recommendations, must-visit places and experiences so you can enjoy your visit to the fullest.",
+    "boton": "Explore places"
+  },
+  "testimonials": {
+    "titulo": "Testimonials",
+    "subtitulo": "What our users say"
+  },
+  "cta": {
+  "titulo": "Join",
+  "subtitulo": "our community",
+  "descripcion": "Be part of ManzaLife and share your experiences in Manzanillo.",
+  "boton": "Sign up"
+},
+"footer": {
+  "blog": {
+    "titulo": "Blog",
+    "items": ["The largest blog in Manzanillo"]
+  },
+  "posts": {
+    "titulo": "Posts",
+    "items": ["Recent posts"]
+  },
+  "categorias": {
+    "titulo": "Categories",
+    "items": ["Our categories"]
+  },
+  "nosotros": {
+    "titulo": "About us",
+    "items": ["Why explore with us?"]
+  },
+  "testimonials": {
+    "titulo": "Testimonials",
+    "items": ["What our users say"]
+  },
+  "cta": {
+    "titulo": "Join",
+    "items": ["Join the community"]
+  },
+  "derechos": "© 2026 ManzaLife. All rights reserved."
+}
+}
+

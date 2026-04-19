@@ -1,8 +1,11 @@
 import { HashLink } from 'react-router-hash-link';
 import logo from "../../../imgs/logomaxxing.svg";
 import { FooterItems, FooterIconsItems } from "./FooterItems";
+import { useLanguage } from "../../context/LanguageContext";
 
 const Footer = () => {
+    const { textos } = useLanguage();
+
     return (
         <div className="bg-zinc-50 dark:bg-zinc-950 pt-4 md:pt-10 lg:pt-12">
             <footer className="bg-orange-600 text-white dark:bg-zinc-950 py-5">
@@ -28,26 +31,26 @@ const Footer = () => {
                     <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 place-content-center gap-10">
                         {FooterItems.map((item, index) => {
                             return (
-                                <div
-                                    key={index}
-                                    className="flex flex-col gap-1"
-                                >
-                                    <p className="font-bold">{item.title}</p>
+                                <div key={index} className="flex flex-col gap-1">
+                                    <p className="font-bold">
+                                        {textos.footer[item.key]?.titulo || item.title}
+                                    </p>
                                     <ul>
-                                        {item.subthemes.map((item, index) => {
-                                            return (
-                                                <li key={index}>
-                                                    <HashLink
-                                                        to={item.path}
-                                                        className="text-neutral-100 dark:text-neutral-400 text-[15px] hover:text-neutral-300 dark:hover:text-neutral-500 duration-200 transition-all ease-in-out cursor-pointer"
-                                                    >
-                                                        <span>
-                                                            {item.title_theme}
-                                                        </span>
-                                                    </HashLink>
-                                                </li>
-                                            );
-                                        })}
+                                        {
+                                            item.subthemes.map((sub, i) => {
+                                                return (
+                                                    <li key={i}>
+                                                        <HashLink
+                                                            to={sub.path}
+                                                            className='text-neutral-400 text-[15px] hover:text-neutral-500 duration-200 transition-all ease-in-out cursor-pointer'>
+                                                            <span>
+                                                                {textos.footer[item.key]?.items[i] || sub.title_theme}
+                                                            </span>
+                                                        </HashLink>
+                                                    </li>
+                                                );
+                                            })
+                                        }
                                     </ul>
                                 </div>
                             );
@@ -59,8 +62,17 @@ const Footer = () => {
                         derechos reservados.
                     </p>
                 </div>
-            </footer>
-        </div>
+ manuel
+
+                <hr className="border border-neutral-900" />
+
+                <p className="text-center text-sm">
+                    {textos.footer.derechos}
+                </p>
+            </div>
+        </footer>
+
+main
     );
 };
 

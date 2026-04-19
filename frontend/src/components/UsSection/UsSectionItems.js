@@ -5,22 +5,18 @@ import { MdOutlineCardTravel, MdOutlineExplore } from "react-icons/md";
 export const UsSectionItems = [
     {
         icon: FaLocationDot,
-        title: "Lugares reales",
-        description: "Recomendaciones basadas en lugares populares y experiencias reales en Manzanillo."
+        key: "lugares_reales"
     },
     {
         icon: BsEmojiSunglassesFill,
-        title: "Experiencias locales",
-        description: "Desde playas tranquilas hasta vida nocturna y gastronomía local."
+        key: "experiencias"
     },
     {
         icon: MdOutlineCardTravel,
-        title: "Guías para Viajeros",
-        description: "Contenido pensado para ayudarte a descubrir qué hacer, dónde ir y qué visitar."
+        key: "guias"
     },
     {
         icon: MdOutlineExplore,
-        title: "Lugares Imperdibles",
-        description: "Descubre sitios populares y rincones especiales que hacen único a Manzanillo."
+        key: "imperdibles"
     },
 ];

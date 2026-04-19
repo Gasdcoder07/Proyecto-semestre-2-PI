@@ -1,9 +1,11 @@
 import SideImage from "../../../imgs/HomeResources/CentroHisotrico.jpg";
-import { BlogItems} from "./BlogItems";
+import { BlogItems } from "./BlogItems";
 import BlogItem from "./BlogItem";
 import HowItWorksGrid from "./HowItWorksGrid";
 import ActionButton from "../ActionButton";
 import SectionTitle from "../SectionTitle";
+
+import { useLanguage } from "../../context/LanguageContext";
 
 const BlogSection = () => {
   return (
@@ -22,10 +24,9 @@ const BlogSection = () => {
                   más grande de Manzanillo
               </h3>
 
-              <div className="w-full flex flex-col-reverse lg:flex-row justify-center items-center gap-6">
-                  <div className="w-full flex flex-col gap-4">
-                      {BlogItems.map((item) => {
-                          const Icon = item.icon;
+        <h3 className="text-white text-4xl text-center">
+          {textos.blog.titulo_principal}
+        </h3>
 
                           return (
                             <BlogItem
@@ -47,19 +48,27 @@ const BlogSection = () => {
                   </div>
               </div>
 
-              <div className="flex justify-center items-center my-6">
-                  <ActionButton Path={"/blog"} Text={"Ver ahora"}/>
-              </div>
-
-              <h3 className="text-2xl text-center tracking-wider">
-                  ¿Como funciona?
-              </h3>
-
-              <HowItWorksGrid/>
-
-              {/* <hr className="border border-neutral-900" /> */}
+          <div className="relative w-full">
+            <img
+              className="h-full object-cover rounded-2xl"
+              src={SideImage}
+              alt={textos.blog.categoria}
+            />
+            <div className="absolute inset-0 bg-linear-to-r from-zinc-950/70 via-zinc-950/30 to-zinc-950/70" />
           </div>
-      </section>
+        </div>
+
+        <div className="flex justify-center items-center my-6">
+          <ActionButton Path={"/blog"} Text={textos.blog.boton} />
+        </div>
+
+        <h3 className="text-2xl text-center tracking-wider">
+          {textos.blog.como_funciona}
+        </h3>
+
+        <HowItWorksGrid />
+      </div>
+    </section>
   );
 };
 
