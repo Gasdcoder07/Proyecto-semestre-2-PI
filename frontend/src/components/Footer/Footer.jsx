@@ -20,6 +20,7 @@ const Footer = () => {
                                         key={item.id}
                                         href={item.path}
                                         target="_blank"
+                                        rel="noreferrer"
                                         className="group bg-white/10 dark:bg-neutral-800 p-2 rounded-full hover:scale-115 transition-all duration-200 ease-in-out"
                                     >
                                         <Icon className="dark:group-hover:text-orange-600 transition-all duration-200 ease-in-out" />
@@ -28,6 +29,7 @@ const Footer = () => {
                             })}
                         </div>
                     </div>
+
                     <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 place-content-center gap-10">
                         {FooterItems.map((item, index) => {
                             return (
@@ -36,43 +38,34 @@ const Footer = () => {
                                         {textos.footer[item.key]?.titulo || item.title}
                                     </p>
                                     <ul>
-                                        {
-                                            item.subthemes.map((sub, i) => {
-                                                return (
-                                                    <li key={i}>
-                                                        <HashLink
-                                                            to={sub.path}
-                                                            className='text-neutral-400 text-[15px] hover:text-neutral-500 duration-200 transition-all ease-in-out cursor-pointer'>
-                                                            <span>
-                                                                {textos.footer[item.key]?.items[i] || sub.title_theme}
-                                                            </span>
-                                                        </HashLink>
-                                                    </li>
-                                                );
-                                            })
-                                        }
+                                        {item.subthemes.map((sub, i) => {
+                                            return (
+                                                <li key={i}>
+                                                    <HashLink
+                                                        to={sub.path}
+                                                        className='text-neutral-400 text-[15px] hover:text-neutral-500 duration-200 transition-all ease-in-out cursor-pointer'
+                                                    >
+                                                        <span>
+                                                            {textos.footer[item.key]?.items[i] || sub.title_theme}
+                                                        </span>
+                                                    </HashLink>
+                                                </li>
+                                            );
+                                        })}
                                     </ul>
                                 </div>
                             );
                         })}
                     </div>
+
                     <hr className="border border-white/10 dark:border-neutral-900" />
+
                     <p className="text-center text-sm">
-                        © {new Date().getFullYear()} ManzaLife. Todos los
-                        derechos reservados.
+                        {textos.footer.derechos}
                     </p>
                 </div>
- manuel
-
-                <hr className="border border-neutral-900" />
-
-                <p className="text-center text-sm">
-                    {textos.footer.derechos}
-                </p>
-            </div>
-        </footer>
-
-main
+            </footer>
+        </div>
     );
 };
 
