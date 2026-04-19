@@ -1,6 +1,7 @@
 import SectionTitle from "../SectionTitle";
 import TestimonialsGrid from "./TestimonialsGrid";
 import { useLanguage } from "../../context/LanguageContext";
+import imgage from "../../../imgs/HomeResources/Testimonials/AxlTraje.webp"
 
 const TestimonialsSection = () => {
   const { textos } = useLanguage();
