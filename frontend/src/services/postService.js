@@ -31,6 +31,15 @@ export const postPost = async (data) => {
     return res.data;
 }
 
+export const updatePost = async (slug, data) => {
+    const res = await api.put(`posts/${slug}/`, data, {
+        headers: {
+            "Content-Type" : "multipart/form-data"
+        }
+    });
+    return res.data;
+}
+
 export const getPostsByUsername = async (UserName) => {
     const res = await api.get(`posts/?author=${UserName}`);
     return res.data;
