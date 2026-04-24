@@ -128,7 +128,7 @@ export default function PostForm({ mode, PostData = null }) {
             <div className="w-full max-w-2xl flex flex-col gap-6">
                 {/* Dropdown de Categorias */}
                 <div onClick={() => setDropdownVisible(!dropdownVisible)} className="relative w-full flex justify-end">
-                    <button className="bg-zinc-50 dark:bg-transparent flex items-center justify-center gap-2 py-2 px-4 rounded-xl border-b border-neutral-800 cursor-pointer">
+                    <button className="bg-zinc-50 dark:bg-zinc-900/20 flex items-center justify-center gap-2 py-2 px-4 rounded-xl border-b border-neutral-800 cursor-pointer">
                         <span>{formData.category_name}</span>
                         <MdArrowDropDown className={`text-xl ${dropdownVisible ? 'rotate-180' : ''}`}/>
                     </button>

@@ -16,6 +16,14 @@ class CategoryViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.AllowAny]
     pagination_class = CustomPagination
 
+    def list(self, request, *args, **kwargs):
+        if request.query_params.get('pagination') == 'false':
+            queryset = self.filter_queryset(self.get_queryset())
+            serializer = self.get_serializer(queryset, many=True)
+            return Response(serializer.data)
+        
+        return super().list(request, *args, **kwargs)
+
 class PostViewSet(viewsets.ModelViewSet):
     lookup_field = "slug"
     permission_classes = [permissions.IsAuthenticatedOrReadOnly, IsAuthorOrReadOnly]
