@@ -21,4 +21,9 @@ export const DICTIONARY = [
     { word: "TRENES", desc: "Transporte que se vincula directamente con el puerto de Manzanillo" },
     { word: "CUYUTLAN", desc: "Laguna cercana a Manzanillo que contiene gran valor ecológico" },
     { word: "BARCELO", desc: "Hotel más grande de Manzanillo" },
+    { word: "MANUEL", desc: "Haz encontrado el EasterEgg, soy un dev de ManzaLife" },
+    { word: "VALENTIN", desc: "Haz encontrado el EasterEgg, soy un dev de ManzaLife" },
+    { word: "AXL", desc: "Haz encontrado el EasterEgg, soy un dev ManzaLife" },
+    { word: "BRIAN", desc: "Haz encontrado el EasterEgg, soy un dev de ManzaLife" },
+    { word: "GRECO", desc: "Haz encontrado el EasterEgg, soy un dev de ManzaLife" }
 ]
