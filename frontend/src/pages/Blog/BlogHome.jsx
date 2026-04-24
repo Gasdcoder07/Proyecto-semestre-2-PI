@@ -1,22 +1,36 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { BlogPostsGrid } from "../../components/Blog/index"
 import { usePosts } from "../../hooks/usePosts";
 import { MdArrowDropDown } from "react-icons/md";
 import BlogHomeSkeleton from "../../components/Blog/BlogPosts/BlogHomeSkeleton";
 import { useLanguage } from "../../context/LanguageContext";
+import PaginationControls from "../../components/Blog/PaginationControls";
 
 export default function Blog() {
     const { textos, idioma } = useLanguage();
-    const {posts, loading} = usePosts();
+    const [currentPage, setCurrentPage] = useState(1);
+
+    const topRef = useRef(null);
+
+    const handlePageChange = (newPage) => {
+        topRef.current?.scrollIntoView({ behavior : "smooth" });
+        setCurrentPage(newPage);
+    }
+
+    const {posts, loading} = usePosts(currentPage);
+    const postsArray = posts?.results || [];
+
+    const totalPages = posts?.count ? Math.ceil(posts.count / 8) : 1;
+
     const [categoriaActivada, setCategoriaActivada] = useState("Todas");
-    const categorias = ["Todas", ...new Set(posts.map(post => post.category_name).filter(Boolean))];
+    const categorias = ["Todas", ...new Set(postsArray.map(post => post.category_name).filter(Boolean))];
     const [dropdownVisible, setDropdownVisible] = useState(false);
-    const postsFinales = categoriaActivada === "Todas" ? posts : posts.filter(post => post.category_name === categoriaActivada);
+    const postsFinales = categoriaActivada === "Todas" ? postsArray : posts.filter(post => post.category_name === categoriaActivada);
 
     if (loading) return <BlogHomeSkeleton/>
 
     return (
-        <>
+        <div ref={topRef} className="scroll-m-32">
             <div className="mt-4 flex items-center justify-between">
                 <h3 className="text-2xl font-light">
                     {
@@ -72,7 +86,11 @@ export default function Blog() {
                 </div>
             </div>
 
-            <BlogPostsGrid posts={postsFinales} />
-        </>
+            <BlogPostsGrid
+                posts={postsFinales}
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={handlePageChange}/>
+        </div>
     );
 }
