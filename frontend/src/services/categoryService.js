@@ -5,4 +5,4 @@ export const getCategories = async (page = 1) => {
         params: { page: page }
     });
     return res.data;
-} 
+}

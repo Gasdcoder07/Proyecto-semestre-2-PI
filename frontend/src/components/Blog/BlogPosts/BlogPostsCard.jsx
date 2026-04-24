@@ -14,7 +14,7 @@ const BlogPostsCard = ({Image, Category, Title, Description, Slug, AutorAvatar, 
                 loading="lazy"
                 className="w-full h-full object-cover"/>
             <div className="absolute inset-0 flex justify-start items-end py-3 px-5">
-                <div className="bg-neutral-800 px-3 py-2 rounded-xl">
+                <div className="bg-zinc-50 dark:bg-neutral-800 px-3 py-2 rounded-xl">
                     <span className="text-orange-500 line-clamp-1">{Category}</span>
                 </div>
             </div>
