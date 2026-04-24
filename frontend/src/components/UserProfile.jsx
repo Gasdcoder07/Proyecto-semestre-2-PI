@@ -45,12 +45,12 @@ const UserProfile = ({ UserAvatar, Username }) => {
 
             {
                 avatarDropdownOpen && (
-                    <div className="absolute rounded-xl bg-zinc-800 border-neutral-800 shadow-lg top-full right-0 mt-2 w-48 max-h-52 z-20 overflow-y-auto custom-scrollbar">
+                    <div className="absolute rounded-xl bg-zinc-100 dark:bg-zinc-800 border-neutral-800 shadow-lg top-full right-0 mt-2 w-48 max-h-52 z-20 overflow-y-auto custom-scrollbar">
                         <div className="w-full h-full px-6 py-3">
                             <div className="flex flex-col gap-2">
                                 <Link
                                     to={`/blog/profile/${Username}`}
-                                    className="flex gap-2 items-center px-2 py-1 hover:bg-zinc-700 rounded-lg">
+                                    className="flex gap-2 items-center px-2 py-1 hover:bg-black/5 dark:hover:bg-zinc-700 rounded-lg">
                                     <FaUser className="text-lg"/>
                                     <span>Perfil</span>
                                 </Link>
@@ -59,7 +59,7 @@ const UserProfile = ({ UserAvatar, Username }) => {
 
                                 <button
                                     onClick={(handleLogout)}
-                                    className="cursor-pointer rounded-lg flex gap-2 justify-center items-center px-2 py-1 hover:bg-zinc-700">
+                                    className="cursor-pointer rounded-lg flex gap-2 justify-center items-center px-2 py-1 hover:bg-black/5 dark:hover:bg-zinc-700">
                                     <IoLogOut className="text-lg"/>
                                     <span>Cerrar sesión</span>
                                 </button>
