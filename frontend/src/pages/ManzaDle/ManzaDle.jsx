@@ -5,6 +5,7 @@ import Header from "./HeaderManzaDle"
 import Board from "./Board"
 import Keyboard from "./Keyboard"
 import GameModal from "./GameModal"
+import InfoModal from "./InfoModal"
 
 const getDailyWord = () => {
     const today = new Date()
@@ -22,6 +23,7 @@ export default function ManzaDle() {
     const [turn, setTurn] = useState(0)
     const [isGameOver, setIsGameOver] = useState(false)
     const [isWin, setIsWin] = useState(false)
+    const [showInfo, setShowInfo] = useState(false)
 
     const solution = solutionData.word
     const description = solutionData.desc
@@ -70,7 +72,8 @@ export default function ManzaDle() {
         <div className="min-h-screen bg-linear-to-b from-zinc-950 to-orange-950 text-white flex flex-col font-sans">
             <Navbar />
             <main className="grow flex flex-col items-center pt-28 pb-8 px-4 w-full max-w-lg mx-auto relative">
-                <Header />
+                <Header onOpenInfo={() => setShowInfo(true)}/>
+                {showInfo && (<InfoModal onClose={() => setShowInfo(false)}/>)}
                 <div className="w-full grow flex flex-col justify-center items-center mb-6">
                     <Board guesses={guesses} currentGuess={currentGuess} turn={turn} solution={solution} />
                 </div>
