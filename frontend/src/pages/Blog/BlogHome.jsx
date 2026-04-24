@@ -41,7 +41,7 @@ export default function Blog() {
                 {/* Dropdown */}
                 <div
                     onClick={() => setDropdownVisible(!dropdownVisible)}
-                    className="relative w-fit">
+                    className="bg-zinc-50 dark:bg-transparent relative w-fit">
                     <button className="flex items-center justify-center gap-2 py-2 px-4 rounded-xl border-b border-neutral-800 cursor-pointer">
                         <span>{categoriaActivada}</span>
                         <MdArrowDropDown className={`text-xl ${dropdownVisible ? 'rotate-180' : ''}`}/>
@@ -51,13 +51,13 @@ export default function Blog() {
 
                     {
                         dropdownVisible && (
-                            <div className="absolute top-full z-10 right-0 mt-2 w-48 max-h-32 overflow-y-auto rounded-xl shadow-lg shadow-orange-600/10 border border-neutral-800 bg-zinc-900 custom-scrollbar">
+                            <div className="absolute top-full z-10 right-0 mt-2 w-48 max-h-32 overflow-y-auto rounded-xl shadow-lg shadow-orange-600/10 border border-neutral-800 bg-zinc-50 dark:bg-zinc-900 custom-scrollbar">
                                 <ul className="flex flex-col px-4 py-2 gap-2">
                                     {
                                         categorias.map((item, index) => {
                                             return (
                                                 <li
-                                                    className="block rounded-lg hover:bg-zinc-800 px-2 py-1 cursor-pointer"
+                                                    className="block rounded-lg hover:bg-black/5 dark:hover:bg-zinc-800 px-2 py-1 cursor-pointer"
                                                     onClick={() => setCategoriaActivada(item)}
                                                     key={index}>
                                                     <span className="text-sm">{item}</span>
