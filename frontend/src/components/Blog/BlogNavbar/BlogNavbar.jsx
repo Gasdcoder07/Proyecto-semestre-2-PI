@@ -48,17 +48,19 @@ const BlogNavbar = () => {
                 </div> */}
 
                 <div className="flex justify-center items-center gap-4 sm:gap-6 shrink-0">
-                    <button
-                        className={"text-black dark:text-white cursor-pointer hover:text-orange-400 transition-colors ease-in-out duration-200 px-3 py-1"}
-                        onClick={handleLanguageChange}>
-                        {idioma === "en" ? "EN" : "ES"}
-                    </button>
-
-                    <ToggleThemeButton/>
-
-                    <Link to={user ? "/create-post" : "/auth/login"} className="hover:text-orange-600 transition-colors duration-200 ease-in-out">
+                    <Link to={user ? "/create-post" : "/auth/login"} className="text-white hover:text-zinc-950 dark:hover:text-orange-600 transition-colors duration-200 ease-in-out">
                         <span>{idioma === "en" ? "Create Post" : "Crear Post"}</span>
                     </Link>
+
+                    <div className="flex justify-center items-center gap-2">
+                        <button
+                            className={"text-white cursor-pointer hover:text-zinc-950 dark:hover:text-orange-600 transition-colors ease-in-out duration-200 px-3 py-1"}
+                            onClick={handleLanguageChange}>
+                            {idioma === "en" ? "EN" : "ES"}
+                        </button>
+
+                        <ToggleThemeButton isUsedInNavbar={true}/>
+                    </div>
 
                     {
                         user && (
