@@ -22,7 +22,7 @@ const PaginationControls = ({ currentPage, totalPages, onPageChange }) => {
                     <div
                         key={i}
                         onClick={() => onPageChange(i)}
-                        className={`p-2 min-w-10 rounded-xl flex justify-center items-center cursor-pointer transition-all ${isActive ? 'bg-orange-600 text-white font-bold' : 'bg-black/5 hover:bg-black/10 dark:bg-white/5 dark:hover:bg-white/10'}`}>
+                        className={`p-2 min-w-10 rounded-xl flex justify-center items-center cursor-pointer transition-all ${isActive ? 'bg-orange-500 dark:bg-orange-600 text-white font-bold' : 'bg-black/5 hover:bg-black/10 dark:bg-white/5 dark:hover:bg-white/10'}`}>
                         <span>{i}</span>
                     </div>
                 )

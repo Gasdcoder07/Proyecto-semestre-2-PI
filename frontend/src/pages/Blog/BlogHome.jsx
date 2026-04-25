@@ -53,7 +53,7 @@ export default function Blog() {
             <div className="mt-4 flex items-center justify-between">
                 
                
-                <h3 className="text-2xl font-light">
+                <h3 className="text-2xl">
                     {idioma === "en" ? (
                         <>
                             {textos?.main_blog?.home?.subtitle}{" "}
@@ -63,10 +63,10 @@ export default function Blog() {
                         </>
                     ) : (
                         <>
+                            {textos?.main_blog?.home?.subtitle}{" "}
                             <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-500 to-orange-800">
                                 {textos?.main_blog?.home?.title}
                             </span>{" "}
-                            {textos?.main_blog?.home?.subtitle}
                         </>
                     )}
                 </h3>
@@ -75,9 +75,9 @@ export default function Blog() {
                 <div
                     ref={dropdownRef}
                     onClick={() => setDropdownVisible(!dropdownVisible)}
-                    className="bg-zinc-50 dark:bg-transparent relative w-fit"
+                    className="relative w-fit"
                 >
-                    <button className="flex items-center justify-center gap-2 py-2 px-4 rounded-xl border-b border-neutral-800 cursor-pointer">
+                    <button className="bg-[#fffbf8] dark:bg-[#0d0d0f] flex items-center justify-center gap-2 py-2 px-4 rounded-xl border border-neutral-300 dark:border-neutral-800 cursor-pointer">
                         <span>{categoriaActivada}</span>
                         <MdArrowDropDown
                             className={`text-xl ${dropdownVisible ? "rotate-180" : ""}`}
@@ -86,7 +86,7 @@ export default function Blog() {
 
                     {/* Lista */}
                     {dropdownVisible && (
-                        <div className="absolute top-full z-10 right-0 mt-2 w-48 max-h-32 overflow-y-auto rounded-xl shadow-lg shadow-orange-600/10 border border-neutral-800 bg-zinc-50 dark:bg-zinc-900 custom-scrollbar">
+                        <div className="absolute top-full z-10 right-0 mt-2 w-48 max-h-32 overflow-y-auto rounded-xl shadow-lg shadow-orange-600/10 border border-neutral-300 dark:border-neutral-800 bg-zinc-50 dark:bg-zinc-900 custom-scrollbar">
                             <ul className="flex flex-col px-4 py-2 gap-2">
                                 {categorias.map((item, index) => (
                                     <li

@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom"
-import logo from "../../../../imgs/logomaxxing.svg";
+import logoLight from "../../../../imgs/LogoLight.svg";
+import logoDark from "../../../../imgs/logomaxxing.svg";
 import { FaSearch } from "react-icons/fa";
 import { IoClose, IoMenu } from "react-icons/io5"
 import { useRef, useState } from "react";
@@ -9,10 +10,12 @@ import DefaultAvatar from "../../../../imgs/DefaultAvatar.webp";
 import UserProfile from "../../UserProfile";
 import ToggleThemeButton from "../../ToggleThemeButton";
 import { useLanguage } from "../../../context/LanguageContext";
+import { useTheme } from "../../../context/ThemeContext";
 
 const BlogNavbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const { textos, idioma, setIdioma } = useLanguage();
+    const { isDark } = useTheme();
     const { user } = useAuth();
 
     const handleLanguageChange = () => {
@@ -22,11 +25,11 @@ const BlogNavbar = () => {
     // console.log(user)
 
     return (
-        <nav className="bg-orange-600 dark:bg-transparent w-full border-b border-neutral-700 flex justify-center items-center">
+        <nav className="bg-[#fffbf8] dark:bg-[#0d0d0f] w-full border-b border-neutral-800/20 dark:border-neutral-800 flex justify-center items-center">
             <div className="container mx-auto flex justify-between items-center px-4 py-2 gap-6 md:px-8 lg:px-12">
                 <Link to={"/"} className="shrink-0 hidden sm:flex">
                     <img
-                        src={logo}
+                        src={isDark ? logoDark : logoLight}
                         alt="ManzaLife"
                         className="h-10 object-cover select-none"
                     />
@@ -35,7 +38,8 @@ const BlogNavbar = () => {
                 <div className="sm:hidden shrink-0 flex justify-center items-center">
                     <IoMenu
                         onClick={() => setIsOpen(true)}
-                        className="text-2xl"/>
+                        className="text-2xl"
+                    />
                 </div>
 
                 {/* <div className="relative w-full max-w-2xl text-white mx-auto flex justify-center items-center">
@@ -48,56 +52,64 @@ const BlogNavbar = () => {
                 </div> */}
 
                 <div className="flex justify-center items-center gap-4 sm:gap-6 shrink-0">
-                    <Link to={user ? "/create-post" : "/auth/login"} className="text-white hover:text-zinc-950 dark:hover:text-orange-600 transition-colors duration-200 ease-in-out">
-                        <span>{idioma === "en" ? "Create Post" : "Crear Post"}</span>
+                    <Link
+                        to={user ? "/create-post" : "/auth/login"}
+                        className="hover:text-orange-600 transition-colors duration-200 ease-in-out"
+                    >
+                        <span>
+                            {idioma === "en" ? "Create Post" : "Crear Post"}
+                        </span>
                     </Link>
 
                     <div className="flex justify-center items-center gap-2">
                         <button
-                            className={"text-white cursor-pointer hover:text-zinc-950 dark:hover:text-orange-600 transition-colors ease-in-out duration-200 px-3 py-1"}
-                            onClick={handleLanguageChange}>
-                            {idioma === "en" ? "EN" : "ES"}
+                            className={
+                                "cursor-pointer hover:text-orange-600 transition-colors ease-in-out duration-200 px-3 py-1"
+                            }
+                            onClick={handleLanguageChange}
+                        >
+                            {idioma === "en" ? "En" : "Es"}
                         </button>
 
-                        <ToggleThemeButton isUsedInNavbar={true}/>
+                        <ToggleThemeButton isUsedInNavbar={true} />
                     </div>
 
-                    {
-                        user && (
-                            <UserProfile
-                                UserAvatar={user?.avatar || DefaultAvatar}
-                                Username={user.username}/>
-                        )
-                    }
+                    {user && (
+                        <UserProfile
+                            UserAvatar={user?.avatar || DefaultAvatar}
+                            Username={user.username}
+                        />
+                    )}
                 </div>
             </div>
 
             {/* IsOpen? */}
-            {
-                isOpen && (
-                    <div className="sm:hidden absolute inset-0 bg-black/85 z-10">
-                        <div className="relative">
-                            <IoClose
-                                onClick={() => setIsOpen(false)}
-                                className="absolute top-4 right-4 text-2xl"/>
-                        </div>
-                        <ul className="w-full h-full flex flex-col justify-center items-center gap-4">
-                            {
-                                BlogSidebarItems.map((item, index) => {
-                                    return (
-                                        <li key={index}>
-                                            <Link to={item.path} onClick={() => setIsOpen(false)}>
-                                                <span className="block text-center text-xl">{item.text}</span>
-                                            </Link>
-                                        </li>
-                                    )
-                                })
-                            }
-                        </ul>
+            {isOpen && (
+                <div className="sm:hidden absolute inset-0 bg-black/85 z-10">
+                    <div className="relative">
+                        <IoClose
+                            onClick={() => setIsOpen(false)}
+                            className="text-white absolute top-4 right-4 text-2xl"
+                        />
                     </div>
-                )
-            }
-
+                    <ul className="w-full h-full flex flex-col justify-center items-center gap-4">
+                        {BlogSidebarItems.map((item, index) => {
+                            return (
+                                <li key={index}>
+                                    <Link
+                                        to={item.path}
+                                        onClick={() => setIsOpen(false)}
+                                    >
+                                        <span className="text-white block text-center text-xl">
+                                            {item.text}
+                                        </span>
+                                    </Link>
+                                </li>
+                            );
+                        })}
+                    </ul>
+                </div>
+            )}
         </nav>
     );
 };

@@ -35,3 +35,8 @@ export const getPostsByUsername = async (UserName) => {
     const res = await api.get(`posts/?author=${UserName}`);
     return res.data;
 }
+
+export const deletePost = async (slug) => {
+    const res = await api.delete(`posts/${slug}/`);
+    return res.data;
+}

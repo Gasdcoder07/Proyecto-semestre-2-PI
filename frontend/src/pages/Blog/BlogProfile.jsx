@@ -7,11 +7,13 @@ import ImageProfileModal from "../../components/Modals/ImageProfileModal";
 import BlogProfileSkeleton from "../../components/Blog/BlogProfile/BlogProfileSkeleton";
 import BlogProfileError from "../../components/Blog/BlogProfile/BlogProfileError";
 import { MdOutlineAddPhotoAlternate } from "react-icons/md";
-import Banner from "../../../imgs/LoginResources/Login_bg.png";
-import DefaultAvatar from "../../../imgs/DefaultAvatar.webp";
 import BlogProfilePost from "../../components/Blog/BlogProfile/BlogProfilePost";
-import { getPostsByUsername } from "../../services/postService";
+import { deletePost, getPostsByUsername } from "../../services/postService";
 import { useLanguage } from "../../context/LanguageContext";
+import DefaultBanner from "../../../imgs/LoginResources/Login_bg.png";
+import DefaultAvatar from "../../../imgs/DefaultAvatar.webp";
+import DeletePostModal from "../../components/Modals/DeletePostModal";
+import BannerProfileModal from "../../components/Modals/BannerProfileModal";
 
 const BlogProfile = () => {
     const { username } = useParams()
@@ -21,12 +23,17 @@ const BlogProfile = () => {
 
     const [showModal, setShowModal] = useState(false);
     const [showImageModal, setShowImageModal] = useState(false);
+    const [showBannerModal, setShowBannerModal] = useState(false);
+
+    const [showDeleteModal, setShowDeleteModal] = useState(false);
+    const [deleteSelectedPost, setDeleteSelectedPost] = useState(null);
 
     const [profileData, setProfileData] = useState(null);
     const [loading, setLoading] = useState(true);
 
     const [posts, setPosts] = useState([]);
     const [loadingPosts, setLoadingPosts] = useState(true);
+
     
     useEffect(() => {
         const fetchProfileData = async () => {
@@ -82,22 +89,33 @@ const BlogProfile = () => {
         return <BlogProfileError/>
     }
 
+    const handleDelete = (slug) => {
+        setDeleteSelectedPost(slug);
+        setShowDeleteModal(true);
+    }
+
+    const handleDeleteConfirm = async (slug) => {
+        await deletePost(slug);
+        setPosts(prev => prev.filter(p => p.slug !== slug));
+    }
+
     // console.log(username)
     // console.log(posts);
+    console.log(profileData)
 
   return (
     <div className="py-4 flex flex-col gap-4">
-        <div className="bg-zinc-50 dark:bg-transparent border border-neutral-700 rounded-xl overflow-hidden shadow-xl">
+        <div className="bg-[#fffbf8] dark:bg-[#0d0d0f] border border-neutral-300 dark:border-neutral-700 rounded-xl overflow-hidden shadow-xl">
             <div className="relative h-56 sm:h-72">
                 <img
                     className="w-full h-full object-cover"
-                    src={Banner}
+                    src={profileData?.banner || DefaultBanner}
                     alt="Banner" 
                 />
 
                 {
                     Authorized && (
-                        <button className="absolute bottom-4 right-4 bg-white/20 p-2 rounded-full hover:bg-white/30 cursor-pointer transition-colors duration-200 ease-in-out">
+                        <button onClick={() => setShowBannerModal(true)} className="absolute bottom-4 right-4 bg-white/20 p-2 rounded-full hover:bg-white/30 cursor-pointer transition-colors duration-200 ease-in-out">
                             <MdOutlineAddPhotoAlternate className="text-white"/>
                         </button>
                     )
@@ -151,7 +169,7 @@ const BlogProfile = () => {
             </div>
         </div>
 
-        <div className="border border-neutral-700 rounded-xl px-6 py-4 flex flex-col gap-4">
+        <div className="bg-[#fffbf8] dark:bg-[#0d0d0f] border border-neutral-300 dark:border-neutral-700 rounded-xl px-6 py-4 flex flex-col gap-4">
             <p className="font-semibold">
                 {idioma === "en" ? "Posts" : "Publicaciones"}
             </p>
@@ -166,7 +184,8 @@ const BlogProfile = () => {
                                 PostSlug={post.slug}
                                 PostImage={post.image}
                                 PostName={post.title}
-                                PostCreationDate={post.created_at}/>
+                                PostCreationDate={post.created_at}
+                                handleDelete={handleDelete}/>
                         )
                     })
                 }
@@ -195,6 +214,20 @@ const BlogProfile = () => {
             showImageModal &&
                 <ImageProfileModal
                     setShowImageModal={setShowImageModal}/>
+        }
+        {
+            showDeleteModal && (
+                <DeletePostModal
+                    postSlug={deleteSelectedPost}
+                    setShowDeleteModal={setShowDeleteModal}
+                    deleteConfirm={handleDeleteConfirm}/>
+            )
+        }
+        {
+            showBannerModal && (
+                <BannerProfileModal
+                    setShowBannerModal={setShowBannerModal}/>
+            )
         }
     </div>
   );

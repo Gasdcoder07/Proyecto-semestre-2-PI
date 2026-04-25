@@ -33,7 +33,7 @@ const BlogCommunity = () => {
   return (
     <div className="scroll-mt-32" ref={topRef}>
         <div className="mt-4">
-                <h3 className="text-2xl font-light">
+                <h3 className="text-2xl">
                     {textos.main_blog.community.subtitle}{" "}
                     <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-500 to-orange-800">
                         {textos.main_blog.community.title}
