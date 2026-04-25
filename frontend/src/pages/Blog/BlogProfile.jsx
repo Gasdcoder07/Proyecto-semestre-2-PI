@@ -7,11 +7,12 @@ import ImageProfileModal from "../../components/Modals/ImageProfileModal";
 import BlogProfileSkeleton from "../../components/Blog/BlogProfile/BlogProfileSkeleton";
 import BlogProfileError from "../../components/Blog/BlogProfile/BlogProfileError";
 import { MdOutlineAddPhotoAlternate } from "react-icons/md";
-import Banner from "../../../imgs/LoginResources/Login_bg.png";
-import DefaultAvatar from "../../../imgs/DefaultAvatar.webp";
 import BlogProfilePost from "../../components/Blog/BlogProfile/BlogProfilePost";
-import { getPostsByUsername } from "../../services/postService";
+import { deletePost, getPostsByUsername } from "../../services/postService";
 import { useLanguage } from "../../context/LanguageContext";
+import DefaultBanner from "../../../imgs/LoginResources/Login_bg.png";
+import DefaultAvatar from "../../../imgs/DefaultAvatar.webp";
+import DeletePostModal from "../../components/Modals/DeletePostModal";
 
 const BlogProfile = () => {
     const { username } = useParams()
@@ -22,11 +23,15 @@ const BlogProfile = () => {
     const [showModal, setShowModal] = useState(false);
     const [showImageModal, setShowImageModal] = useState(false);
 
+    const [showDeleteModal, setShowDeleteModal] = useState(false);
+    const [deleteSelectedPost, setDeleteSelectedPost] = useState(null);
+
     const [profileData, setProfileData] = useState(null);
     const [loading, setLoading] = useState(true);
 
     const [posts, setPosts] = useState([]);
     const [loadingPosts, setLoadingPosts] = useState(true);
+
     
     useEffect(() => {
         const fetchProfileData = async () => {
@@ -82,8 +87,19 @@ const BlogProfile = () => {
         return <BlogProfileError/>
     }
 
+    const handleDelete = (slug) => {
+        setDeleteSelectedPost(slug);
+        setShowDeleteModal(true);
+    }
+
+    const handleDeleteConfirm = async (slug) => {
+        await deletePost(slug);
+        setPosts(prev => prev.filter(p => p.slug !== slug));
+    }
+
     // console.log(username)
     // console.log(posts);
+    console.log(profileData)
 
   return (
     <div className="py-4 flex flex-col gap-4">
@@ -91,7 +107,7 @@ const BlogProfile = () => {
             <div className="relative h-56 sm:h-72">
                 <img
                     className="w-full h-full object-cover"
-                    src={Banner}
+                    src={profileData?.banner || DefaultBanner}
                     alt="Banner" 
                 />
 
@@ -166,7 +182,8 @@ const BlogProfile = () => {
                                 PostSlug={post.slug}
                                 PostImage={post.image}
                                 PostName={post.title}
-                                PostCreationDate={post.created_at}/>
+                                PostCreationDate={post.created_at}
+                                handleDelete={handleDelete}/>
                         )
                     })
                 }
@@ -196,6 +213,17 @@ const BlogProfile = () => {
                 <ImageProfileModal
                     setShowImageModal={setShowImageModal}/>
         }
+        {
+            showDeleteModal && (
+                <DeletePostModal
+                    postSlug={deleteSelectedPost}
+                    setShowDeleteModal={setShowDeleteModal}
+                    deleteConfirm={handleDeleteConfirm}/>
+            )
+        }
+
+
+
     </div>
   );
 };
