@@ -25,7 +25,7 @@ const BlogCategories = () => {
   return (
     <>
         <div className="mt-4 flex items-center justify-between">
-            <h3 className="text-2xl font-light">
+            <h3 className="text-2xl">
                 {textos.main_blog.categories.subtitle}{" "}
                 <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-500 to-orange-800">
                     {textos.main_blog.categories.title}

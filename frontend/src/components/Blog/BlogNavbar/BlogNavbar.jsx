@@ -89,7 +89,7 @@ const BlogNavbar = () => {
                     <div className="relative">
                         <IoClose
                             onClick={() => setIsOpen(false)}
-                            className="absolute top-4 right-4 text-2xl"
+                            className="text-white absolute top-4 right-4 text-2xl"
                         />
                     </div>
                     <ul className="w-full h-full flex flex-col justify-center items-center gap-4">
@@ -100,7 +100,7 @@ const BlogNavbar = () => {
                                         to={item.path}
                                         onClick={() => setIsOpen(false)}
                                     >
-                                        <span className="block text-center text-xl">
+                                        <span className="text-white block text-center text-xl">
                                             {item.text}
                                         </span>
                                     </Link>

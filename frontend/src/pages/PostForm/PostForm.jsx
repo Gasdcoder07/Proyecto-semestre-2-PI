@@ -219,7 +219,7 @@ export default function PostForm({ mode, PostData = null }) {
                             placeholder="Agrega una descripción a tu publicación"
                             value={formData.content}
                             onChange={handleChange}
-                            className="w-full px-4 bg-transparent h-24 outline-none resize-none placeholder:text-zinc-600 font-light text-white custom-scrollbar"
+                            className="w-full px-4 bg-transparent h-24 outline-none resize-none placeholder:text-zinc-600 font-light dark:text-white custom-scrollbar"
                         />
                     </div>
                 </div>
